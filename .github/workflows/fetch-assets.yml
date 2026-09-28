@@ -1,0 +1,36 @@
+name: Fetch Figma assets
+
+on:
+  push:
+    branches: [portfolio-site]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-assets:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: portfolio-site
+      - name: Download permanent site assets
+        run: |
+          mkdir -p assets
+          curl -L --fail --retry 3 -o assets/home.png "https://www.figma.com/api/mcp/asset/ffe984cb-aa09-4692-bf50-c22887058d47.png"
+          curl -L --fail --retry 3 -o assets/satou.png "https://www.figma.com/api/mcp/asset/b8912d99-76c6-4438-b08a-988d1288652b.png"
+          curl -L --fail --retry 3 -o assets/psychologist.png "https://www.figma.com/api/mcp/asset/dd0fde1b-81bb-4236-bde4-c7fc36c7fb12.png"
+          curl -L --fail --retry 3 -o assets/petroglif.png "https://www.figma.com/api/mcp/asset/43bfb69b-25f9-4a9c-9992-d1f9590fd7ee.png"
+          test -s assets/home.png
+          test -s assets/satou.png
+          test -s assets/psychologist.png
+          test -s assets/petroglif.png
+      - name: Commit assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet || git commit -m "Add Figma render assets"
+          git push origin portfolio-site
