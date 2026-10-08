@@ -155,6 +155,7 @@
 <script data-scroll-enhanced>
 (() => {
   document.querySelectorAll('.petro-scroll-x').forEach((el) => {
+    el.scrollLeft = 0;
     let dragging = false;
     let startX = 0;
     let startLeft = 0;
@@ -187,6 +188,11 @@
       dragging = false;
       el.classList.remove('is-dragging');
     });
+
+    if (el.classList.contains('userflow-scroll')) {
+      requestAnimationFrame(() => { el.scrollLeft = 0; });
+      window.addEventListener('pageshow', () => { el.scrollLeft = 0; }, { once: true });
+    }
 
     el.addEventListener('wheel', (e) => {
       if (el.scrollWidth <= el.clientWidth) return;
