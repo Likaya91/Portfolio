@@ -327,3 +327,120 @@ body{min-width:320px}
 .hotspot:focus-visible{outline:2px solid #d0522c;outline-offset:2px}
 .case-page{background:#fff}
 .back-hit{border-radius:6px}
+
+
+/* PETROGLIF case */
+.petro-body{background:#f5f3ef;color:#0d0d0d}
+.petro-page{width:100%;max-width:1440px;margin:0 auto;overflow:hidden;background:#f5f3ef;font-family:"Inter",Arial,sans-serif}
+.petro-section{position:relative;width:100%;display:flex;flex-direction:column;align-items:stretch;height:auto}
+.petro-white{background:#fff;padding:112px 96px;gap:34px}
+.petro-ivory{background:#f5f3ef;padding:112px 96px;gap:34px}
+.petro-cover{background:#f5f3ef;padding:93px 96px 96px;gap:63px}
+.petro-result{background:#0d0d0d;padding:120px 96px;gap:36px;color:#fff}
+.petro-closing{padding-top:120px;padding-bottom:140px;gap:28px}
+
+.petro-cover-copy{width:100%;display:flex;flex-direction:column;gap:22px}
+.petro-kicker,.petro-label,.petro-footer{
+  font-family:"Unbounded",Arial,sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  color:#7a7874;
+}
+.petro-kicker{font-size:12px;line-height:1.5;letter-spacing:.18em}
+.petro-cover h1{margin:0;font:900 18px/1.5 "Unbounded",Arial,sans-serif;letter-spacing:0;color:#0d0d0d}
+.petro-chips{display:flex;flex-wrap:wrap;gap:12px}
+.petro-chips span{
+  display:inline-flex;align-items:center;min-height:34px;padding:8px 14px;
+  border:1px solid #d5d3cf;background:#fff;
+  font:500 12px/1.5 "Inter",Arial,sans-serif;letter-spacing:.12em;color:#292929
+}
+.petro-label{font-size:12px;line-height:1.5;letter-spacing:.18em}
+.petro-label-light{color:#9c9c9c}
+.petro-title{
+  margin:0;
+  width:100%;
+  font:900 44px/1.5 "Unbounded",Arial,sans-serif;
+  letter-spacing:-.02em;
+  color:#0d0d0d;
+}
+.petro-title-lg{font-size:48px}
+.petro-title-light{color:#fff}
+.petro-body-copy{
+  margin:0;width:100%;
+  font:300 16px/1.5 "Inter",Arial,sans-serif;
+  letter-spacing:0;color:#7a7874
+}
+.petro-body-copy-lg{font-size:18px}
+.petro-body-light{color:#d1d1d1;font-size:18px}
+.petro-artifact,.petro-artifact img,.petro-artifact-img{display:block;width:100%;height:auto}
+.petro-testing-stack{display:flex;flex-direction:column;gap:44px}
+.petro-divider{width:100%;height:1px;background:#d5d3cf}
+.petro-footer{font-size:12px;line-height:1.5;letter-spacing:.16em}
+.petro-back{
+  display:flex;align-items:center;justify-content:center;
+  width:72px;height:34px;border:1px solid #0d0d0d;border-radius:999px;
+  text-decoration:none;font:500 18px/1 Arial,sans-serif;color:#0d0d0d;background:transparent;
+  z-index:4
+}
+.petro-back-top{position:absolute;left:75px;top:43px}
+.petro-back-bottom{position:absolute;left:96px;bottom:72px}
+
+.petro-scroll-x{
+  width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-inline:contain;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab
+}
+.petro-scroll-x::-webkit-scrollbar{display:none}
+.petro-scroll-x:active{cursor:grabbing}
+.userflow-scroll{height:auto}
+.userflow-scroll picture{display:block;width:max-content}
+.userflow-image{display:block;width:3664px;max-width:none;height:auto}
+.final-scroll{height:auto}
+.final-mobile-image{display:block;width:869px;max-width:none;height:auto}
+.mobile-only{display:none!important}
+
+@media(max-width:767px){
+  .petro-page{
+    max-width:none;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Roboto,system-ui,Arial,sans-serif
+  }
+  .petro-section{height:auto;padding:30px 16px;gap:20px}
+  .petro-cover{padding:60px 16px 24px;gap:20px}
+  .petro-result{padding:30px 16px;gap:20px}
+  .petro-closing{padding:30px 16px;gap:20px}
+
+  .petro-kicker,.petro-label,.petro-footer{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif
+  }
+  .petro-kicker{font-size:11px;line-height:1.5;letter-spacing:.18em}
+  .petro-cover h1{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;
+    font-size:24px;font-weight:500;line-height:1.2;letter-spacing:0
+  }
+  .petro-cover-copy{gap:20px}
+  .petro-chips{gap:8px 10px}
+  .petro-chips span{
+    min-height:30px;padding:6px 10px;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
+    font-size:11px;font-weight:400;line-height:1.5;letter-spacing:.12em
+  }
+  .petro-label{font-size:11px;line-height:1.5;letter-spacing:.18em}
+  .petro-title,.petro-title-lg{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;
+    font-size:32px;font-weight:700;line-height:1.2;letter-spacing:-.02em
+  }
+  .petro-body-copy,.petro-body-copy-lg,.petro-body-light{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
+    font-size:16px;font-weight:400;line-height:1.5;letter-spacing:0
+  }
+  .petro-footer{font-size:11px;line-height:1.5;letter-spacing:.16em}
+  .petro-testing-stack{gap:20px}
+  .petro-back{width:72px;height:34px}
+  .petro-back-top{left:0;top:14px}
+  .petro-back-bottom{left:16px;bottom:30px}
+  .petro-closing{padding-bottom:88px}
+  .desktop-only{display:none!important}
+  .mobile-only{display:block!important}
+  .userflow-image{width:966px}
+  .userflow-scroll{width:100%}
+  .final-mobile-image{width:869px}
+}
