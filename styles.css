@@ -39,7 +39,8 @@ body{min-width:320px}
   width:4px;height:4px;border-radius:2px;background:#d0522c;flex:0 0 4px
 }
 
-.hero-headline{\n  height:auto;
+.hero-headline{
+  height:auto;
   padding:28px 116px 0 64px
 }
 .hero-headline h1{
@@ -49,7 +50,8 @@ body{min-width:320px}
   color:#fff
 }
 
-.hero-info{\n  height:auto;
+.hero-info{
+  height:auto;
   padding:20px 64px 0;
   display:flex;
   flex-flow:row wrap;
@@ -142,7 +144,8 @@ body{min-width:320px}
   font-feature-settings:"lnum" 1,"pnum" 1
 }
 
-.works-strip{\n  height:auto;
+.works-strip{
+  height:auto;
   padding:24px 64px 0;
   border-top:1px solid rgba(255,255,255,.1);
   display:flex;
@@ -150,7 +153,9 @@ body{min-width:320px}
   align-content:flex-start;
   gap:30px 12px
 }
-.case-card{\n  width:429.333px;\n  flex:0 0 429.333px;
+.case-card{
+  width:429.333px;
+  flex:0 0 429.333px;
   display:flex;
   flex-direction:column;
   text-decoration:none;
@@ -211,17 +216,20 @@ body{min-width:320px}
     line-height:13px
   }
 
-  .hero-headline{\n    height:auto;\n    padding:0 16px
+  .hero-headline{
+    height:auto;
+    padding:0 16px
   }
   .hero-headline h1{
-    font-family:Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,Arial,sans-serif;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;
     font-size:24px;
     font-weight:500;
     line-height:1.2;
     letter-spacing:-1.5px
   }
 
-  .hero-info{\n    height:auto;
+  .hero-info{
+    height:auto;
     padding:0 16px;
     display:flex;
     flex-direction:column;
@@ -241,7 +249,10 @@ body{min-width:320px}
     height:258px
   }
 
-  .about-block{\n    width:100%;\n    height:auto;\n    flex:0 0 auto;
+  .about-block{
+    width:100%;
+    height:auto;
+    flex:0 0 auto;
     gap:10px
   }
   .about-block h2{
@@ -273,7 +284,8 @@ body{min-width:320px}
 
   .desktop-contacts{display:none}
 
-  .works-strip{\n    height:auto;
+  .works-strip{
+    height:auto;
     padding:24px 16px 0;
     display:flex;
     flex-direction:column;
