@@ -404,11 +404,13 @@ body{min-width:320px}
 .userflow-scroll picture{display:block;width:max-content;padding:0;margin:0}
 .userflow-image{
   display:block;
-  width:3664px;
+  width:auto;
   max-width:none;
-  height:auto;
+  height:588px;
+  aspect-ratio:3664 / 588;
   margin:0;
   object-fit:contain;
+  flex:none;
 }
 .final-scroll{height:auto}
 .final-scroll-inner{display:flex;align-items:flex-start;gap:18px;width:max-content}
@@ -458,7 +460,12 @@ body{min-width:320px}
   .petro-closing{padding-bottom:88px}
   .desktop-only{display:none!important}
   .mobile-only{display:block!important}
-  .userflow-image{width:966px;height:auto}
+  .userflow-image{
+    width:auto;
+    max-width:none;
+    height:155px;
+    aspect-ratio:966 / 155;
+  }
   .userflow-scroll{width:100%;height:157px;border:1px solid rgba(13,13,13,.09);border-radius:20px}
   .userflow-scroll picture{padding:0;margin:0}
   .final-mobile-image{width:831.234px}
