@@ -379,7 +379,7 @@ body{min-width:320px}
 .petro-footer{font-size:12px;line-height:1.5;letter-spacing:.16em}
 .petro-back{
   display:flex;align-items:center;justify-content:center;
-  width:72px;height:34px;border:1px solid #0d0d0d;border-radius:999px;
+  width:72px;height:34px;border:0;border-radius:0;
   text-decoration:none;color:#0d0d0d;background:transparent;
   z-index:4
 }
@@ -458,3 +458,17 @@ body{min-width:320px}
 
 .petro-back svg{display:block;width:36px;height:17px}
 .petro-back path{fill:#0d0d0d}
+
+.petro-scroll-x{
+  position:relative;
+  scroll-behavior:auto;
+  user-select:none;
+  -webkit-user-select:none;
+  touch-action:pan-x;
+}
+.petro-scroll-x img{
+  -webkit-user-drag:none;
+  user-drag:none;
+  pointer-events:none;
+}
+.petro-scroll-x.is-dragging{cursor:grabbing}
