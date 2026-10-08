@@ -151,5 +151,59 @@
   </section>
 
 </main>
+
+<script data-scroll-enhanced>
+(() => {
+  document.querySelectorAll('.petro-scroll-x').forEach((el) => {
+    let dragging = false;
+    let startX = 0;
+    let startLeft = 0;
+
+    el.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'touch') return;
+      dragging = true;
+      startX = e.clientX;
+      startLeft = el.scrollLeft;
+      el.classList.add('is-dragging');
+      el.setPointerCapture?.(e.pointerId);
+      e.preventDefault();
+    });
+
+    el.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      el.scrollLeft = startLeft - (e.clientX - startX);
+    });
+
+    const stop = (e) => {
+      if (!dragging) return;
+      dragging = false;
+      el.classList.remove('is-dragging');
+      try { el.releasePointerCapture?.(e.pointerId); } catch {}
+    };
+
+    el.addEventListener('pointerup', stop);
+    el.addEventListener('pointercancel', stop);
+    el.addEventListener('lostpointercapture', () => {
+      dragging = false;
+      el.classList.remove('is-dragging');
+    });
+
+    el.addEventListener('wheel', (e) => {
+      if (el.scrollWidth <= el.clientWidth) return;
+
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (!delta) return;
+
+      const max = el.scrollWidth - el.clientWidth;
+      const next = Math.max(0, Math.min(max, el.scrollLeft + delta));
+
+      if (next !== el.scrollLeft) {
+        e.preventDefault();
+        el.scrollLeft = next;
+      }
+    }, { passive: false });
+  });
+})();
+</script>
 </body>
 </html>
