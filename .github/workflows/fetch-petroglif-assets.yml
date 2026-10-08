@@ -1,0 +1,68 @@
+name: Fetch PETROGLIF assets
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assets:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download PETROGLIF assets
+        run: |
+          mkdir -p assets/petroglif
+
+          curl -L --fail --retry 3 -o assets/petroglif/cover-desktop.png "https://www.figma.com/api/mcp/asset/3639b7c3-6adf-42ad-89a8-9a83eb7dfa7a.png"
+          curl -L --fail --retry 3 -o assets/petroglif/cover-mobile.png "https://www.figma.com/api/mcp/asset/a3e6f4b9-28d3-4b3a-859c-5229db11b7ee.png"
+
+          curl -L --fail --retry 3 -o assets/petroglif/task-desktop.png "https://www.figma.com/api/mcp/asset/badd2978-7c3a-4824-b138-58c8128f0dd0.png"
+          curl -L --fail --retry 3 -o assets/petroglif/task-mobile.png "https://www.figma.com/api/mcp/asset/87b69f81-e0d9-4fa4-b4be-52e67167278a.png"
+
+          curl -L --fail --retry 3 -o assets/petroglif/competitors-desktop.png "https://www.figma.com/api/mcp/asset/4770142d-9151-47d1-a6f9-80b35d8d6db8.png"
+          curl -L --fail --retry 3 -o assets/petroglif/competitors-mobile.png "https://www.figma.com/api/mcp/asset/a983ffae-72b5-405d-a0c2-def8d5ee6af7.png"
+          curl -L --fail --retry 3 -o assets/petroglif/competitor-insights-desktop.png "https://www.figma.com/api/mcp/asset/20b24996-83d6-4728-a0ce-8163c8bcd401.png"
+          curl -L --fail --retry 3 -o assets/petroglif/competitor-insights-mobile.png "https://www.figma.com/api/mcp/asset/4633b712-d276-41a8-9701-30c38befc9ff.png"
+
+          curl -L --fail --retry 3 -o assets/petroglif/references-desktop.png "https://www.figma.com/api/mcp/asset/c1843de9-2724-47ce-b472-875a0a2be555.png"
+          curl -L --fail --retry 3 -o assets/petroglif/references-mobile.png "https://www.figma.com/api/mcp/asset/d0e48240-9b81-4e34-8e01-73c9a246536e.png"
+
+          curl -L --fail --retry 3 -o assets/petroglif/persona-cards-desktop.png "https://www.figma.com/api/mcp/asset/74870ed0-dd32-4b7d-b919-d0c429ee9c02.png"
+          curl -L --fail --retry 3 -o assets/petroglif/persona-cards-mobile.png "https://www.figma.com/api/mcp/asset/71f23752-82a4-49d3-8494-c7d7ce77d0e6.png"
+          curl -L --fail --retry 3 -o assets/petroglif/persona-desktop.png "https://www.figma.com/api/mcp/asset/61f5f4fb-6fb8-42ba-9882-cf22c7caa6bd.png"
+          curl -L --fail --retry 3 -o assets/petroglif/persona-mobile.png "https://www.figma.com/api/mcp/asset/2d3b83cd-664a-40e7-811a-876de1de6e2f.png"
+
+          curl -L --fail --retry 3 -o assets/petroglif/ujm-desktop.png "https://www.figma.com/api/mcp/asset/e8378a32-36b8-4c2d-836a-e7c80d1faabe.png"
+          curl -L --fail --retry 3 -o assets/petroglif/ujm-mobile.png "https://www.figma.com/api/mcp/asset/4e738006-6c62-4b76-bcd7-1288b8e79c96.png"
+
+          curl -L --fail --retry 3 -o assets/petroglif/userflow-desktop.png "https://www.figma.com/api/mcp/asset/f3482a98-fe77-4a13-b1ea-56a079e50bf9.png"
+          curl -L --fail --retry 3 -o assets/petroglif/userflow-mobile.png "https://www.figma.com/api/mcp/asset/58218f5b-6845-4cf5-9b83-bf3701793e66.png"
+
+          curl -L --fail --retry 3 -o assets/petroglif/testing-1-desktop.png "https://www.figma.com/api/mcp/asset/21c1c955-fe9d-41e6-892d-8fd0ae17b650.png"
+          curl -L --fail --retry 3 -o assets/petroglif/testing-2-desktop.png "https://www.figma.com/api/mcp/asset/dd33b891-8d30-4202-bb5f-30f2ec1daf80.png"
+          curl -L --fail --retry 3 -o assets/petroglif/testing-mobile.png "https://www.figma.com/api/mcp/asset/ebc60714-0a5b-40df-a753-bc44535518a5.png"
+
+          curl -L --fail --retry 3 -o assets/petroglif/variants-desktop.png "https://www.figma.com/api/mcp/asset/4bb4b7c3-a2bf-452a-b076-81b859cd1ea1.png"
+          curl -L --fail --retry 3 -o assets/petroglif/variants-mobile.png "https://www.figma.com/api/mcp/asset/1c4f2896-c913-4121-8181-5d3de5260d5f.png"
+
+          curl -L --fail --retry 3 -o assets/petroglif/result-desktop.png "https://www.figma.com/api/mcp/asset/05770a20-0395-496b-a020-7b64056d1703.png"
+          curl -L --fail --retry 3 -o assets/petroglif/result-mobile.png "https://www.figma.com/api/mcp/asset/ed8db4c3-3324-4989-a845-17010175cc87.png"
+
+          curl -L --fail --retry 3 -o assets/petroglif/final-desktop.png "https://www.figma.com/api/mcp/asset/d1cbb351-595b-4f11-9ebf-0ab5fad3c0a8.png"
+          curl -L --fail --retry 3 -o assets/petroglif/final-mobile.png "https://www.figma.com/api/mcp/asset/3d13f88f-d8e4-44d4-a7f8-0bf1b91fed80.png"
+
+          find assets/petroglif -type f -size 0 -print -quit | grep -q . && exit 1 || true
+
+      - name: Commit PETROGLIF assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/petroglif
+          git diff --cached --quiet || git commit -m "Add PETROGLIF responsive assets"
+          git push origin main
