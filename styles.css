@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,700&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,700&family=Manrope:wght@400;500;600;700&family=Roboto:wght@400;500;600&display=swap');
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:#141414}
@@ -46,6 +46,7 @@ body{min-width:320px}
 .hero-headline h1{
   margin:0;
   font:400 72px/1.2 "Cormorant Garamond",Georgia,serif;
+  letter-spacing:-1.5px;
   color:#fff
 }
 
@@ -200,7 +201,7 @@ body{min-width:320px}
     max-width:360px;
     gap:20px;
     padding-bottom:70px;
-    font-family:Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",system-ui,Arial,sans-serif
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Roboto,system-ui,Arial,sans-serif
   }
 
   .portfolio-nav{
@@ -208,7 +209,7 @@ body{min-width:320px}
     padding:20px 16px
   }
   .nav-logo{
-    font-family:Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
     font-size:11px;
     line-height:13px
   }
@@ -254,7 +255,7 @@ body{min-width:320px}
   }
   .about-block h2{
     width:328px;
-    font-family:Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
     font-size:16px;
     font-weight:500;
     line-height:1.2
@@ -267,7 +268,7 @@ body{min-width:320px}
     gap:10px
   }
   .mobile-contacts a{
-    font:400 14px/1.5 Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif;
+    font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
     letter-spacing:1px;
     color:rgba(208,82,44,.8);
     text-decoration:none
@@ -276,7 +277,7 @@ body{min-width:320px}
   .about-copy{
     width:328px;
     color:rgba(255,255,255,.6);
-    font:400 16px/1.5 Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif
+    font:400 16px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif
   }
 
   .desktop-contacts{display:none}
@@ -303,11 +304,11 @@ body{min-width:320px}
     white-space:normal
   }
   .case-label strong{
-    font:600 14px/1.5 Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif;
+    font:600 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
     color:#fff
   }
   .case-label>span{
-    font:400 14px/1.5 Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif;
+    font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
     text-transform:none;
     color:rgba(255,255,255,.6)
   }
