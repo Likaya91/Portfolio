@@ -401,16 +401,24 @@ body{min-width:320px}
   overflow-y:hidden;
   touch-action:pan-x;
 }
-.userflow-scroll picture{display:block;width:max-content;padding:0;margin:0}
+.userflow-scroll picture{
+  display:block;
+  width:3664px;
+  min-width:3664px;
+  height:588px;
+  padding:0;
+  margin:0;
+}
 .userflow-image{
   display:block;
-  width:auto;
+  width:3664px;
+  min-width:3664px;
   max-width:none;
   height:588px;
-  aspect-ratio:3664 / 588;
   margin:0;
-  object-fit:contain;
-  flex:none;
+  object-fit:fill;
+  object-position:left center;
+  flex:0 0 3664px;
 }
 .final-scroll{height:auto}
 .final-scroll-inner{display:flex;align-items:flex-start;gap:18px;width:max-content}
@@ -461,13 +469,22 @@ body{min-width:320px}
   .desktop-only{display:none!important}
   .mobile-only{display:block!important}
   .userflow-image{
-    width:auto;
+    width:966px;
+    min-width:966px;
     max-width:none;
     height:155px;
-    aspect-ratio:966 / 155;
+    object-fit:fill;
+    object-position:left center;
+    flex:0 0 966px;
   }
   .userflow-scroll{width:100%;height:157px;border:1px solid rgba(13,13,13,.09);border-radius:20px}
-  .userflow-scroll picture{padding:0;margin:0}
+  .userflow-scroll picture{
+    width:966px;
+    min-width:966px;
+    height:155px;
+    padding:0;
+    margin:0;
+  }
   .final-mobile-image{width:831.234px}
 }
 
@@ -487,3 +504,8 @@ body{min-width:320px}
   pointer-events:none;
 }
 .petro-scroll-x.is-dragging{cursor:grabbing}
+
+.userflow-scroll{
+  direction:ltr;
+  overflow-anchor:none;
+}
