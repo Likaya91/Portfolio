@@ -354,7 +354,8 @@ body{min-width:320px}
   border:1px solid #d5d3cf;background:#fff;
   font:500 12px/1.5 "Inter",Arial,sans-serif;letter-spacing:.12em;color:#292929
 }
-.petro-label{font-size:12px;line-height:1.5;letter-spacing:.18em}
+.petro-label{font-size:12px;line-height:1.5;letter-spacing:.18em;display:flex;align-items:center;gap:10px}
+.petro-label::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex:0 0 7px}
 .petro-label-light{color:#9c9c9c}
 .petro-title{
   margin:0;
