@@ -1,0 +1,40 @@
+name: Upgrade PETROGLIF mobile assets
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upgrade:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download 3x mobile PETROGLIF exports
+        run: |
+          mkdir -p assets/petroglif
+          curl -L --fail --retry 3 -o assets/petroglif/cover-mobile.png "https://www.figma.com/api/mcp/asset/7adba83e-927f-459e-92a9-cd2d6dadfca7.png"
+          curl -L --fail --retry 3 -o assets/petroglif/task-mobile.png "https://www.figma.com/api/mcp/asset/d2392ceb-d224-4b32-8319-4ec5264a205f.png"
+          curl -L --fail --retry 3 -o assets/petroglif/competitors-mobile.png "https://www.figma.com/api/mcp/asset/18ac09e4-885b-4be7-b3a1-5bc6c993e64b.png"
+          curl -L --fail --retry 3 -o assets/petroglif/competitor-insights-mobile.png "https://www.figma.com/api/mcp/asset/ec5eb99e-555b-480e-a4b5-15f2d3c8f30c.png"
+          curl -L --fail --retry 3 -o assets/petroglif/references-mobile.png "https://www.figma.com/api/mcp/asset/9f586f8e-9e19-46af-a052-26a6bb00934f.png"
+          curl -L --fail --retry 3 -o assets/petroglif/persona-cards-mobile.png "https://www.figma.com/api/mcp/asset/2299263f-2aaa-44c9-9447-06e3d30d7743.png"
+          curl -L --fail --retry 3 -o assets/petroglif/persona-mobile.png "https://www.figma.com/api/mcp/asset/e028a6fd-f066-42e4-bc40-e1bfd6f0f69c.png"
+          curl -L --fail --retry 3 -o assets/petroglif/ujm-mobile.png "https://www.figma.com/api/mcp/asset/73564aea-1b46-4da4-bfff-8df48771232b.png"
+          curl -L --fail --retry 3 -o assets/petroglif/userflow-mobile.png "https://www.figma.com/api/mcp/asset/5cf418b8-a0ce-478e-8d6c-6acac11ab9fe.png"
+          curl -L --fail --retry 3 -o assets/petroglif/testing-mobile.png "https://www.figma.com/api/mcp/asset/fc5fd755-0cc5-44c3-956e-37d941bb7aa9.png"
+          curl -L --fail --retry 3 -o assets/petroglif/variants-mobile.png "https://www.figma.com/api/mcp/asset/fd613ff6-56eb-44c1-aef5-c6089000b422.png"
+          curl -L --fail --retry 3 -o assets/petroglif/result-mobile.png "https://www.figma.com/api/mcp/asset/2f057ab1-720b-4780-9512-0c442d3a3eed.png"
+          curl -L --fail --retry 3 -o assets/petroglif/final-mobile.png "https://www.figma.com/api/mcp/asset/02a2ca15-f03f-440e-87e8-20fb1337b5f3.png"
+          find assets/petroglif -type f -size 0 -print -quit | grep -q . && exit 1 || true
+      - name: Commit 3x mobile PETROGLIF assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/petroglif
+          git diff --cached --quiet || git commit -m "Upgrade PETROGLIF mobile assets to 3x"
+          git push origin main
