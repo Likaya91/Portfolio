@@ -1,1 +1,322 @@
-*{box-sizing:border-box}html,body{margin:0;padding:0;background:#141414}body{font-family:Arial,sans-serif}a{color:inherit}.page{width:min(100%,1440px);margin:0 auto;position:relative;line-height:0}.page>img{display:block;width:100%;height:auto}.hotspot{position:absolute;display:block;z-index:10;cursor:pointer;border:0;background:transparent;text-indent:-9999px;overflow:hidden}.hotspot:focus-visible{outline:2px solid #d0522c;outline-offset:2px}.case-page{background:#fff}.home-page{background:#141414}.back-hit{border-radius:6px}.loading-note{position:fixed;left:16px;bottom:16px;z-index:99;background:rgba(20,20,20,.85);color:#fff;font:12px/1.4 Arial,sans-serif;padding:8px 10px;border-radius:6px;display:none}@media(max-width:720px){.page{width:100%}.loading-note{font-size:11px}}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,700&family=Manrope:wght@400;500;600;700&display=swap');
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#141414}
+a{color:inherit}
+body{min-width:320px}
+
+.portfolio-home{
+  width:100%;
+  max-width:1440px;
+  margin:0 auto;
+  background:#141414;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  padding-bottom:70px;
+  overflow:hidden;
+  font-family:"Manrope",Arial,sans-serif
+}
+
+.portfolio-nav{
+  width:100%;
+  height:61px;
+  padding:20px 64px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  display:flex;
+  align-items:center
+}
+.nav-logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:rgba(255,255,255,.4);
+  font:500 14px/1.5 "Manrope",Arial,sans-serif;
+  white-space:nowrap
+}
+.nav-dot{
+  width:4px;height:4px;border-radius:2px;background:#d0522c;flex:0 0 4px
+}
+
+.hero-headline{
+  height:200px;
+  padding:28px 116px 0 64px
+}
+.hero-headline h1{
+  margin:0;
+  font:400 72px/1.2 "Cormorant Garamond",Georgia,serif;
+  color:#fff
+}
+
+.hero-info{
+  height:286px;
+  padding:20px 64px 0;
+  display:flex;
+  flex-flow:row wrap;
+  align-items:center;
+  align-content:center;
+  row-gap:40px
+}
+.portrait-slot{
+  width:231px;
+  height:266px;
+  flex:0 0 231px;
+  overflow:hidden;
+  border-radius:6px
+}
+.portrait-slot picture{display:block}
+.portrait-image{
+  display:block;
+  width:194px;
+  height:265px;
+  object-fit:cover
+}
+
+.about-block{
+  width:600px;
+  flex:0 0 600px;
+  display:flex;
+  flex-direction:column;
+  gap:10px
+}
+.about-block h2{
+  margin:0;
+  width:243px;
+  font:400 20px/1.5 "Manrope",Arial,sans-serif;
+  color:#fff
+}
+.about-copy{
+  width:600px;
+  color:rgba(255,255,255,.6);
+  font:400 16px/1.5 "Manrope",Arial,sans-serif
+}
+.about-copy p{margin:0}
+
+.mobile-contacts{display:none}
+
+.desktop-contacts{
+  width:481px;
+  flex:0 0 481px;
+  padding-left:50px
+}
+.contact-row{
+  width:424px;
+  min-height:42px;
+  border-top:1px solid rgba(255,255,255,.1);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 0
+}
+.contact-row>span{
+  font:700 12px/1.5 "Manrope",Arial,sans-serif;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.4);
+  white-space:nowrap
+}
+.contact-row>a{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  font:500 18px/1.5 "Cormorant Garamond",Georgia,serif;
+  color:#d0522c;
+  white-space:nowrap
+}
+.contact-row>a span{
+  text-decoration:underline;
+  text-underline-position:from-font
+}
+.contact-row>a img{
+  display:block;
+  width:18px;
+  height:22px
+}
+.contact-phone{
+  border-bottom:1px solid rgba(255,255,255,.1)
+}
+.contact-phone>a{
+  width:138px;
+  color:#fff;
+  font-feature-settings:"lnum" 1,"pnum" 1
+}
+
+.works-strip{
+  height:312px;
+  padding:24px 64px 0;
+  border-top:1px solid rgba(255,255,255,.1);
+  display:flex;
+  flex-flow:row wrap;
+  align-content:flex-start;
+  gap:30px 12px
+}
+.case-card{
+  width:calc((100% - 24px)/3);
+  display:flex;
+  flex-direction:column;
+  text-decoration:none;
+  min-width:0
+}
+.case-picture{
+  display:block;
+  width:100%;
+  height:230px;
+  border-radius:4px;
+  overflow:hidden
+}
+.case-picture img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover
+}
+.case-label{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  padding-top:10px;
+  line-height:1.5;
+  white-space:nowrap
+}
+.case-label strong{
+  font:700 italic 18px/1.5 "Cormorant Garamond",Georgia,serif;
+  color:#d0522c
+}
+.case-label>span{
+  font:600 12px/1.5 "Manrope",Arial,sans-serif;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.4)
+}
+
+.case-card:focus-visible,.contact-row a:focus-visible,.mobile-contacts a:focus-visible{
+  outline:2px solid #d0522c;
+  outline-offset:3px
+}
+
+@media(max-width:767px){
+  .portfolio-home{
+    max-width:360px;
+    gap:20px;
+    padding-bottom:70px;
+    font-family:Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",system-ui,Arial,sans-serif
+  }
+
+  .portfolio-nav{
+    height:53px;
+    padding:20px 16px
+  }
+  .nav-logo{
+    font-family:Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif;
+    font-size:11px;
+    line-height:13px
+  }
+
+  .hero-headline{
+    height:87px;
+    padding:0 16px
+  }
+  .hero-headline h1{
+    font-family:Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,Arial,sans-serif;
+    font-size:24px;
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:-1.5px
+  }
+
+  .hero-info{
+    height:722px;
+    padding:0 16px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    align-items:flex-start;
+    align-content:stretch;
+    gap:20px
+  }
+  .portrait-slot{
+    width:328px;
+    height:258px;
+    flex:0 0 258px;
+    border-radius:0
+  }
+  .portrait-image{
+    width:194px;
+    height:258px
+  }
+
+  .about-block{
+    width:328px;
+    height:444px;
+    flex:0 0 444px;
+    gap:10px
+  }
+  .about-block h2{
+    width:328px;
+    font-family:Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif;
+    font-size:16px;
+    font-weight:500;
+    line-height:1.2
+  }
+
+  .mobile-contacts{
+    height:21px;
+    display:flex;
+    align-items:center;
+    gap:10px
+  }
+  .mobile-contacts a{
+    font:400 14px/1.5 Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif;
+    letter-spacing:1px;
+    color:rgba(208,82,44,.8);
+    text-decoration:none
+  }
+
+  .about-copy{
+    width:328px;
+    color:rgba(255,255,255,.6);
+    font:400 16px/1.5 Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif
+  }
+
+  .desktop-contacts{display:none}
+
+  .works-strip{
+    height:840px;
+    padding:24px 16px 0;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    gap:30px
+  }
+  .case-card{
+    width:328px;
+    flex:none
+  }
+  .case-picture{
+    width:328px;
+    height:190px
+  }
+  .case-label{
+    gap:3px;
+    padding-top:10px;
+    white-space:normal
+  }
+  .case-label strong{
+    font:600 14px/1.5 Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif;
+    color:#fff
+  }
+  .case-label>span{
+    font:400 14px/1.5 Roboto,-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Arial,sans-serif;
+    text-transform:none;
+    color:rgba(255,255,255,.6)
+  }
+}
+
+/* Existing case pages remain image-based until their own HTML rebuild pass. */
+.page{width:min(100%,1440px);margin:0 auto;position:relative;line-height:0}
+.page>img{display:block;width:100%;height:auto}
+.hotspot{position:absolute;display:block;z-index:10;cursor:pointer;border:0;background:transparent;text-indent:-9999px;overflow:hidden}
+.hotspot:focus-visible{outline:2px solid #d0522c;outline-offset:2px}
+.case-page{background:#fff}
+.back-hit{border-radius:6px}
