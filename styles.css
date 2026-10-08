@@ -308,7 +308,7 @@ body{min-width:320px}
   }
   .case-label strong{
     font:600 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
-    color:#fff
+    color:#d0522c
   }
   .case-label>span{
     font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
