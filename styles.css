@@ -852,8 +852,8 @@ body{min-width:320px}
    gap:10px;
  }
  .satou-overview-grid article:nth-child(1),
- .satou-overview-grid article:nth-child(2){min-height:262px}
- .satou-overview-grid article:nth-child(3){min-height:220px}
+ .satou-overview-grid article:nth-child(2),
+ .satou-overview-grid article:nth-child(3){min-height:0;height:auto}
  .satou-overview-grid h3{margin:0;font:500 24px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#dd8588}
  .satou-overview-grid p{margin:0;font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;color:#3a3a3a}
  .satou-accent h3,.satou-accent h2{font:500 24px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#fff}
@@ -949,5 +949,71 @@ body{min-width:320px}
   .satou-overview-grid article{
     border-radius:28px;
     padding:38px 20px;
+  }
+}
+
+@media(max-width:767px){
+  .satou-requirements .satou-artifact{
+    width:100%;
+    display:block;
+  }
+  .satou-requirements .satou-artifact img{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+
+  .satou-competitors-scroll{
+    width:100%;
+    height:585px;
+    overflow-x:hidden;
+    overflow-y:hidden;
+  }
+  .satou-competitors-scroll picture,
+  .satou-competitors-scroll img{
+    display:block;
+    width:100%;
+    height:auto;
+    max-width:100%;
+    object-fit:contain;
+    object-position:left top;
+  }
+
+  .satou-userflow-scroll{
+    width:100%;
+    height:317px;
+    overflow-x:auto;
+    overflow-y:hidden;
+  }
+  .satou-userflow-scroll picture{
+    display:block;
+    width:max-content;
+    height:316px;
+  }
+  .satou-userflow-scroll img{
+    display:block;
+    width:auto;
+    max-width:none;
+    height:316px;
+    object-fit:contain;
+    object-position:left top;
+  }
+
+  .satou-result{
+    gap:20px!important;
+  }
+  .satou-back-flow{
+    position:static;
+    width:72px;
+    height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    margin:0;
+  }
+  .satou-back-flow svg{
+    width:36px;
+    height:17px;
   }
 }
