@@ -709,6 +709,8 @@ body{min-width:320px}
 .satou-accent{background:#dd8588;padding:56px 96px;gap:10px;color:#fff}
 .satou-requirements{background:#faeded;padding:70px 96px;gap:42px}
 .satou-persona{background:#fff;padding:70px 96px;gap:72px}
+.satou-heading-block{display:flex;flex-direction:column}
+.satou-persona-heading{gap:20px}
 .satou-jtbd{background:#dd8588;padding:64px 72px 64px 96px;gap:40px;color:#fff}
 .satou-competitors{background:#fefefe;padding:61px 96px;gap:52px}
 .satou-solution-section{background:#dd8588;padding:61px 96px;gap:20px;color:#fefefe}
@@ -726,12 +728,13 @@ body{min-width:320px}
   box-sizing:border-box;
   flex:0 0 390px;
   width:390px;
-  min-height:403px;
-  padding:38px 20px;
+  height:403px;
+  padding:38px 36px;
   background:#faeded;
+  border-radius:28px;
   display:flex;
   flex-direction:column;
-  gap:20px;
+  gap:26px;
 }
 .satou-overview-grid h3{margin:0;font:500 26px/1.5 "Manrope",Arial,sans-serif;color:#dd8588}
 .satou-overview-grid p{margin:0;font:400 18px/1.5 "Open Sans",Arial,sans-serif;color:#3a3a3a}
@@ -842,11 +845,15 @@ body{min-width:320px}
  .satou-overview-grid article{
    width:100%;
    min-width:0;
-   min-height:0;
+   height:auto;
    padding:38px 20px;
    background:#faeded;
+   border-radius:28px;
    gap:10px;
  }
+ .satou-overview-grid article:nth-child(1),
+ .satou-overview-grid article:nth-child(2){min-height:262px}
+ .satou-overview-grid article:nth-child(3){min-height:220px}
  .satou-overview-grid h3{margin:0;font:500 24px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#dd8588}
  .satou-overview-grid p{margin:0;font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;color:#3a3a3a}
  .satou-accent h3,.satou-accent h2{font:500 24px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#fff}
@@ -909,6 +916,7 @@ body{min-width:320px}
    width:294px;
    height:auto;
  }
+ .satou-persona-heading{gap:10px}
  .satou-result-copy{gap:20px}.satou-result-copy h3,.satou-result-copy p{font:500 20px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#fff}.satou-meta{font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;color:#fff}
 }
 
