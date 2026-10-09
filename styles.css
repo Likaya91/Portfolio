@@ -417,12 +417,106 @@ body{min-width:320px}
 .final-scroll-end{display:flex;align-items:center;justify-content:center;width:20px;height:570px;font:400 20px/1 Arial,sans-serif;color:#0d0d0d}
 .mobile-only{display:none!important}
 
+
+.petro-card-grid{display:flex;width:100%;align-items:flex-start}
+.petro-info-card{
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  padding:28px;
+  background:#fff;
+  border:1px solid #d5d3cf;
+  min-width:0;
+}
+.petro-card-kicker{
+  font:500 12px/1.5 "Inter",Arial,sans-serif;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#7a7874;
+}
+.petro-info-card h3{
+  margin:0;
+  font:500 18px/1.5 "Inter",Arial,sans-serif;
+  letter-spacing:0;
+  color:#0d0d0d;
+}
+.petro-info-card p{
+  margin:0;
+  font:300 14px/1.5 "Inter",Arial,sans-serif;
+  letter-spacing:0;
+  color:#7a7874;
+}
+.task-role-grid{flex-wrap:wrap;gap:24px}
+.task-role-grid .petro-info-card{flex:0 0 390px;min-height:241px}
+.competitor-insights-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.competitor-insights-grid .petro-info-card{min-height:200px}
+.persona-insights-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px}
+.persona-insights-grid .petro-info-card{min-height:221px}
+.persona-insights-grid .petro-info-card:first-child{min-height:242px}
+.result-cards-grid{flex-wrap:wrap;gap:18px 38px}
+.result-cards-grid .petro-info-card{flex:0 0 390px;min-height:215px}
+.petro-result-card{
+  gap:12px;
+  background:#2a2a2a;
+  border:0;
+}
+.petro-result-card .petro-card-kicker{color:#9c9c9c}
+.petro-result-card h3{color:#fff}
+.petro-result-card p{color:#b8b8b8}
+
+.testing-layout{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:27px;
+}
+.testing-panel{display:block;flex:none;overflow:hidden}
+.testing-panel img{display:block;width:100%;height:auto}
+.testing-panel-a{width:537px}
+.testing-panel-b{width:663px}
+.testing-panel-c{
+  width:1248px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.testing-panel-c::-webkit-scrollbar{display:none}
+.testing-panel-c img{width:1248px;max-width:none}
+
 @media(max-width:767px){
   .petro-page{
     max-width:none;
     font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Roboto,system-ui,Arial,sans-serif
   }
   .petro-section{height:auto;padding:30px 16px;gap:20px}
+
+  .petro-card-grid{display:flex;flex-direction:column;gap:10px}
+  .petro-info-card{
+    width:100%;
+    flex:0 0 auto!important;
+    min-height:0!important;
+    padding:28px;
+    gap:14px;
+  }
+  .petro-card-kicker{
+    font:400 11px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
+    letter-spacing:.14em;
+  }
+  .petro-info-card h3{
+    font:500 16px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Roboto,system-ui,Arial,sans-serif;
+  }
+  .petro-info-card p{
+    font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
+  }
+  .competitor-insights-grid,.persona-insights-grid{display:flex;grid-template-columns:none;gap:18px}
+  .persona-insights-grid{gap:10px}
+  .result-cards-grid{gap:10px}
+  .petro-result-card{gap:10px}
+  .testing-layout{display:flex;flex-direction:column;flex-wrap:nowrap;gap:20px;width:100%}
+  .testing-panel{width:328px;max-width:100%;flex:none;align-self:flex-start}
+  .testing-panel img{display:block;width:328px;max-width:none;height:auto}
+
   .petro-cover{padding:60px 16px 24px;gap:20px}
   .petro-result{padding:30px 16px;gap:20px}
   .petro-closing{padding:30px 16px;gap:20px}
