@@ -1055,3 +1055,151 @@ body{min-width:320px}
     margin:0;
   }
 }
+
+/* Satou responsive hardening */
+.satou-cover{
+  min-height:0;
+}
+.satou-cover picture,
+.satou-cover img{
+  flex:none;
+}
+@media(min-width:768px){
+  .satou-cover picture,
+  .satou-cover img{
+    width:1440px;
+    min-width:1440px;
+    max-width:none;
+  }
+}
+@media(max-width:767px){
+  .satou-cover picture,
+  .satou-cover img{
+    width:360px;
+    min-width:360px;
+    max-width:none;
+  }
+}
+
+/* Requirements as real HTML: typography never scales with the image */
+.satou-requirements-card{
+  width:100%;
+  max-width:1248px;
+  box-sizing:border-box;
+  padding:36px 40px;
+  border-radius:24px;
+  background:#dd8588;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+.satou-req-group{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.satou-req-title{
+  font:400 18px/1.5 "Open Sans",Arial,sans-serif;
+  color:#fff;
+}
+.satou-requirements-card ul{
+  margin:0;
+  padding-left:1.25em;
+  font:400 18px/1.45 "Open Sans",Arial,sans-serif;
+  color:#fff;
+}
+.satou-requirements-card li{margin:0}
+
+/* Mockups: real frames + wrap */
+.satou-mockups{
+  width:100%;
+  height:auto;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:28px 0;
+}
+.satou-browser-frame{
+  position:relative;
+  flex:0 0 894px;
+  width:894px;
+  height:1301px;
+  margin:0;
+  border-radius:28px;
+  background:#faeded;
+  overflow:hidden;
+}
+.satou-phone-frame{
+  position:relative;
+  flex:0 0 434px;
+  width:434px;
+  height:941px;
+  margin-left:-15px;
+  margin-top:360px;
+  border-radius:44px;
+  background:#faeded;
+  overflow:hidden;
+}
+.satou-browser-dots span{background:#dd8588}
+.satou-phone-speaker{background:#dd8588}
+
+/* Once there is no room, phone frame moves below instead of shrinking */
+@media(max-width:1395px) and (min-width:768px){
+  .satou-phone-frame{
+    margin-left:0;
+    margin-top:0;
+  }
+}
+
+@media(max-width:767px){
+  .satou-requirements-card{
+    width:100%;
+    max-width:none;
+    padding:24px 20px;
+    border-radius:20px;
+    gap:24px;
+  }
+  .satou-req-group{gap:14px}
+  .satou-req-title{
+    font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
+  }
+  .satou-requirements-card ul{
+    font:400 14px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
+  }
+
+  .satou-mockups{
+    width:328px;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    gap:20px;
+  }
+  .satou-browser-frame{
+    position:relative;
+    flex:0 0 509px;
+    width:328px;
+    height:509px;
+    margin:0;
+    border-radius:20px;
+    background:#faeded;
+  }
+  .satou-phone-frame{
+    position:relative;
+    flex:0 0 596px;
+    width:328px;
+    height:596px;
+    margin:0;
+    border-radius:28px;
+    background:#faeded;
+  }
+  .satou-desktop-viewport{
+    left:13px;
+    top:27.1567px;
+  }
+  .satou-mobile-viewport{
+    left:17px;
+    top:37.5288px;
+  }
+}
