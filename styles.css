@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,700&family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Roboto:wght@400;500;600&family=Unbounded:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,700&family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Open+Sans:wght@400&family=Roboto:wght@400;500;600&family=Unbounded:wght@500;700;900&display=swap');
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:#141414}
@@ -690,4 +690,32 @@ body{min-width:320px}
 .userflow-scroll{
   direction:ltr;
   overflow-anchor:none;
+}
+
+/* SATOU case */
+.satou-body{margin:0;background:#f6f4f1;color:#111}
+.satou-page{width:100%;max-width:1440px;margin:0 auto;overflow:hidden;background:#f6f4f1;font-family:"Open Sans",Arial,sans-serif}
+.satou-cover{position:relative;width:100%;background:#ef727a}.satou-cover picture,.satou-cover img{display:block;width:100%;height:auto}
+.satou-back{position:absolute;left:69px;top:21px;z-index:5;text-decoration:none;font:500 36px/1 "Manrope",Arial,sans-serif;color:#111}
+.satou-section{display:flex;flex-direction:column;width:100%;height:auto}
+.satou-light{background:#f6f4f1;padding:74px 43px 74px 96px;gap:50px}.satou-white{background:#fff;padding:70px 96px;gap:42px}.satou-accent{background:#ef727a;padding:56px 96px;gap:10px}
+.satou-xl{margin:0;font:500 64px/1.5 "Manrope",Arial,sans-serif}.satou-h2{margin:0;font:500 42px/1.5 "Manrope",Arial,sans-serif}.satou-lead{margin:0;font:400 26px/1.5 "Open Sans",Arial,sans-serif}.satou-copy,.satou-list{margin:0;font:400 18px/1.5 "Open Sans",Arial,sans-serif}
+.satou-accent h3,.satou-accent h2{margin:0;font-family:"Manrope",Arial,sans-serif;font-weight:500}.satou-accent h3{font-size:26px;line-height:1.5}.satou-accent h2{font-size:42px;line-height:1.5}
+.satou-overview-grid{display:flex;flex-wrap:wrap;gap:36px;width:100%}.satou-overview-grid article{flex:1 1 310px;min-width:310px;max-width:390px}.satou-overview-grid h3{margin:0 0 18px;font:500 26px/1.5 "Manrope",Arial,sans-serif}.satou-overview-grid p{margin:0;font:400 18px/1.5 "Open Sans",Arial,sans-serif}
+.satou-artifact,.satou-artifact img{display:block;width:100%;height:auto}.satou-list{padding-left:1.2em}
+.satou-scroll-x{width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab;touch-action:pan-x;user-select:none}.satou-scroll-x::-webkit-scrollbar{display:none}.satou-scroll-x.is-dragging{cursor:grabbing}.satou-scroll-x img{display:block;max-width:none;pointer-events:none;-webkit-user-drag:none}
+.satou-jtbd-scroll{height:330px}.satou-jtbd-scroll picture,.satou-jtbd-scroll img{display:block;width:1277px;height:327px}
+.satou-competitors-scroll{height:1145px}.satou-competitors-scroll picture,.satou-competitors-scroll img{display:block;width:1241px;height:1145px}
+.satou-userflow-scroll{height:650.64px}.satou-userflow-scroll picture,.satou-userflow-scroll img{display:block;width:1294px;height:650.64px}
+.satou-mockups{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}.satou-viewport{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;background:#fff}.satou-viewport::-webkit-scrollbar{display:none}.satou-viewport picture,.satou-viewport img{display:block;max-width:none}
+.satou-desktop-viewport{width:834px;height:1194px}.satou-desktop-viewport img{width:833px;height:7499px}.satou-mobile-viewport{width:393px;height:852px}.satou-mobile-viewport img{width:393px;height:5501px}
+.satou-result{position:relative;background:#f6f4f1;padding:90px 96px;gap:140px}.satou-result-copy{display:flex;flex-direction:column;gap:20px}.satou-result-copy h3{margin:0;font:500 26px/1.5 "Manrope",Arial,sans-serif}.satou-result-copy p{margin:0;font:400 26px/1.5 "Open Sans",Arial,sans-serif}.satou-meta{font:400 18px/1.5 "Open Sans",Arial,sans-serif}.satou-back-bottom{top:auto;bottom:36px;left:80px}
+@media(max-width:767px){
+.satou-page{max-width:none;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Roboto,system-ui,Arial,sans-serif}.satou-back{left:16px;top:14px;font:500 26px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif}
+.satou-section{height:auto!important;padding:30px 16px!important;gap:20px!important}.satou-xl{font:500 32px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif}.satou-h2{font:500 24px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif}.satou-lead,.satou-copy,.satou-list{font:400 16px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif}
+.satou-overview-grid{flex-direction:column;gap:20px}.satou-overview-grid article{min-width:0;max-width:none;width:100%}.satou-overview-grid h3{margin:0 0 10px;font:500 20px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif}.satou-overview-grid p{font:400 16px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif}
+.satou-accent h3,.satou-accent h2{font:500 24px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif}
+.satou-jtbd-scroll{height:84px}.satou-jtbd-scroll picture,.satou-jtbd-scroll img{width:328px;height:84px}.satou-competitors-scroll{height:585px}.satou-competitors-scroll picture,.satou-competitors-scroll img{width:328px;height:878px}.satou-userflow-scroll{height:317px}.satou-userflow-scroll picture,.satou-userflow-scroll img{width:629px;height:316px}
+.satou-mockups{flex-direction:column;flex-wrap:nowrap;gap:20px}.satou-desktop-viewport{width:302px;height:467px;align-self:center}.satou-desktop-viewport img{width:269px;height:2421px;margin-left:16px}.satou-mobile-viewport{width:294px;height:539.82px;align-self:center}.satou-mobile-viewport img{width:294px;height:4115.25px}
+.satou-result-copy{gap:10px}.satou-result-copy h3{font:500 20px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif}.satou-result-copy p,.satou-meta{font:400 16px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif}.satou-back-bottom{left:16px;bottom:18px}
 }
