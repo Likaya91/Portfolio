@@ -933,3 +933,21 @@ body{min-width:320px}
 .satou-userflow-section .satou-copy{margin-top:0}
 .satou-solution-section .satou-copy{margin:0}
 .satou-result-copy>*{margin:0}
+
+/* Satou exact text rhythm */
+.satou-heading-block{display:flex;flex-direction:column;gap:20px}
+.satou-persona-heading{gap:20px}
+.satou-overview-grid article{
+  border-radius:28px;
+  padding:38px 36px;
+}
+.satou-overview-grid h3{margin:0}
+.satou-overview-grid p{margin:0}
+@media(max-width:767px){
+  .satou-heading-block{gap:20px}
+  .satou-persona-heading{gap:10px}
+  .satou-overview-grid article{
+    border-radius:28px;
+    padding:38px 20px;
+  }
+}
