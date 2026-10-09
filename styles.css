@@ -696,7 +696,9 @@ body{min-width:320px}
 /* SATOU case */
 .satou-body{margin:0;background:#fff;color:#3a3a3a}
 .satou-page{width:100%;max-width:1440px;margin:0 auto;overflow:hidden;background:#fff;font-family:"Open Sans",Arial,sans-serif;color:#3a3a3a}
-.satou-cover{position:relative;width:100%;background:#dd8588}.satou-cover picture,.satou-cover img{display:block;width:100%;height:auto}
+.satou-cover{position:relative;width:100%;background:#dd8588;overflow:hidden}
+.satou-cover picture{display:block;width:1440px;max-width:none}
+.satou-cover img{display:block;width:1440px;max-width:none;height:auto}
 .satou-back{position:absolute;z-index:5;text-decoration:none}
 .satou-back-top{left:32px;top:10px;width:76px;height:38px;background:transparent}
 .satou-back-bottom{left:96px;bottom:25px;width:36px;height:17px}
@@ -747,14 +749,15 @@ body{min-width:320px}
 
 .satou-mockup-section{background:#fff;padding:74px 19px 74px 96px;gap:55px}
 .satou-mockups{
-  position:relative;
-  width:1325px;
-  height:1301px;
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:20px 0;
 }
 .satou-browser-frame{
-  position:absolute;
-  left:0;
-  top:0;
+  position:relative;
+  flex:0 0 894px;
   width:894px;
   height:1301px;
   background:#fff;
@@ -771,11 +774,12 @@ body{min-width:320px}
   width:12px;height:12px;border-radius:50%;background:#dd8588;
 }
 .satou-phone-frame{
-  position:absolute;
-  left:879px;
-  top:360px;
+  position:relative;
+  flex:0 0 434px;
   width:434px;
   height:941px;
+  margin-left:-15px;
+  margin-top:360px;
   background:#fff;
 }
 .satou-phone-speaker{
@@ -833,6 +837,8 @@ body{min-width:320px}
 
 @media(max-width:767px){
  .satou-page{max-width:none;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Roboto,system-ui,Arial,sans-serif}
+ .satou-cover picture{width:360px;max-width:none}
+ .satou-cover img{width:360px;max-width:none;height:auto}
  .satou-back-top{left:16px;top:8px;width:62px;height:30px}
  .satou-back-bottom{left:16px;bottom:30px}
  .satou-section{height:auto!important;padding:30px 16px!important;gap:20px!important}
@@ -1015,5 +1021,37 @@ body{min-width:320px}
   .satou-back-flow svg{
     width:36px;
     height:17px;
+  }
+}
+
+@media(min-width:768px) and (max-width:1399px){
+  .satou-phone-frame{
+    margin-left:0;
+    margin-top:20px;
+  }
+}
+
+@media(max-width:767px){
+  .satou-mockups{
+    display:block;
+    position:relative;
+    width:328px;
+    height:1125px;
+  }
+  .satou-browser-frame{
+    position:absolute;
+    left:0;
+    top:0;
+    width:328px;
+    height:509px;
+    margin:0;
+  }
+  .satou-phone-frame{
+    position:absolute;
+    left:0;
+    top:529px;
+    width:328px;
+    height:596px;
+    margin:0;
   }
 }
