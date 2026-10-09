@@ -1318,3 +1318,79 @@ body{min-width:320px}
     font:400 16px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;
   }
 }
+
+/* Satou mobile — exact Figma HUG/FILL/STRETCH fixes */
+@media(max-width:767px){
+  /* 01 Overview cards: FILL width + HUG height */
+  .satou-overview-grid{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    width:100%;
+    gap:10px;
+  }
+  .satou-overview-grid article{
+    box-sizing:border-box;
+    flex:0 0 auto;
+    width:100%;
+    min-width:0;
+    height:auto;
+    min-height:0;
+    padding:38px 20px;
+    gap:10px;
+    border-radius:28px;
+  }
+
+  /* 03 JTBD: frame FILL width, fixed 84px height; image STRETCH width */
+  .satou-jtbd-scroll{
+    width:100%;
+    height:84px;
+    overflow:hidden;
+    cursor:default;
+    touch-action:auto;
+  }
+  .satou-jtbd-scroll picture{
+    display:block;
+    width:100%;
+    height:84px;
+  }
+  .satou-jtbd-scroll img{
+    display:block;
+    width:100%;
+    min-width:100%;
+    max-width:none;
+    height:84px;
+    object-fit:fill;
+    object-position:left top;
+  }
+
+  /* 11 Mockups: vertical Auto Layout with exact 20px gap */
+  .satou-mockups{
+    position:relative;
+    width:328px;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    align-items:stretch;
+    gap:20px;
+  }
+  .satou-browser-frame,
+  .satou-phone-frame{
+    position:relative;
+    left:auto;
+    top:auto;
+    margin-left:0;
+    margin-top:0;
+  }
+  .satou-browser-frame{
+    flex:0 0 auto;
+    width:328px;
+    height:509px;
+  }
+  .satou-phone-frame{
+    flex:0 0 auto;
+    width:328px;
+    height:596px;
+  }
+}
