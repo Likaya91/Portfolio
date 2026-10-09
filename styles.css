@@ -742,8 +742,89 @@ body{min-width:320px}
 .satou-competitors-scroll{height:1145px}.satou-competitors-scroll picture,.satou-competitors-scroll img{display:block;width:1241px;height:1145px}
 .satou-userflow-scroll{height:650.64px}.satou-userflow-scroll picture,.satou-userflow-scroll img{display:block;width:1294px;height:650.64px}
 
-.satou-mockups{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}.satou-viewport{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;background:#fff}.satou-viewport::-webkit-scrollbar{display:none}.satou-viewport picture,.satou-viewport img{display:block;max-width:none}
-.satou-desktop-viewport{width:834px;height:1194px}.satou-desktop-viewport img{width:833px;height:7499px}.satou-mobile-viewport{width:393px;height:852px}.satou-mobile-viewport img{width:393px;height:5501px}
+.satou-mockup-section{background:#fff;padding:74px 19px 74px 96px;gap:55px}
+.satou-mockups{
+  position:relative;
+  width:1325px;
+  height:1301px;
+}
+.satou-browser-frame{
+  position:absolute;
+  left:0;
+  top:0;
+  width:894px;
+  height:1301px;
+  background:#fff;
+}
+.satou-browser-dots{
+  position:absolute;
+  left:51px;
+  top:24px;
+  display:flex;
+  gap:12px;
+  height:12px;
+}
+.satou-browser-dots span{
+  width:12px;height:12px;border-radius:50%;background:#dd8588;
+}
+.satou-phone-frame{
+  position:absolute;
+  left:879px;
+  top:360px;
+  width:434px;
+  height:941px;
+  background:#fff;
+}
+.satou-phone-speaker{
+  position:absolute;
+  left:99px;
+  top:13px;
+  width:72px;
+  height:7px;
+  border-radius:999px;
+  background:#3a3a3a;
+}
+.satou-viewport{
+  position:absolute;
+  overflow-y:auto;
+  overflow-x:hidden;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  background:#fff;
+  overscroll-behavior:contain;
+}
+.satou-viewport::-webkit-scrollbar{display:none}
+.satou-viewport img{
+  display:block;
+  width:auto;
+  max-width:none;
+  height:auto;
+  margin:0;
+  pointer-events:none;
+  -webkit-user-drag:none;
+}
+.satou-desktop-viewport{
+  left:30px;
+  top:56px;
+  width:834px;
+  height:1194px;
+  border-radius:18px;
+}
+.satou-desktop-viewport img{
+  width:833px;
+  height:auto;
+}
+.satou-mobile-viewport{
+  left:21px;
+  top:57px;
+  width:393px;
+  height:852px;
+  border-radius:40px;
+}
+.satou-mobile-viewport img{
+  width:393px;
+  height:auto;
+}
 
 .satou-result-copy{display:flex;flex-direction:column;gap:20px}.satou-result-copy h3{margin:0;font:500 26px/1.5 "Manrope",Arial,sans-serif;color:#fff}.satou-result-copy p{margin:0;font:400 26px/1.5 "Open Sans",Arial,sans-serif;color:#fff}.satou-meta{font:400 18px/1.5 "Open Sans",Arial,sans-serif;color:#fff}
 
@@ -772,9 +853,62 @@ body{min-width:320px}
  .satou-jtbd-scroll{height:84px}.satou-jtbd-scroll picture,.satou-jtbd-scroll img{width:328px;height:84px}
  .satou-competitors-scroll{height:585px}.satou-competitors-scroll picture,.satou-competitors-scroll img{width:328px;height:878px}
  .satou-userflow-scroll{height:317px}.satou-userflow-scroll picture,.satou-userflow-scroll img{width:629px;height:316px}
- .satou-mockups{flex-direction:column;flex-wrap:nowrap;gap:20px}
- .satou-desktop-viewport{width:302px;height:467px;align-self:center}.satou-desktop-viewport img{width:269px;height:2421px;margin-left:16px}
- .satou-mobile-viewport{width:294px;height:539.82px;align-self:center}.satou-mobile-viewport img{width:294px;height:4115.25px}
+ .satou-mockup-section{padding:30px 16px!important;gap:20px!important}
+ .satou-mockups{
+   position:relative;
+   width:328px;
+   height:1125px;
+ }
+ .satou-browser-frame{
+   position:absolute;
+   left:0;
+   top:0;
+   width:328px;
+   height:509px;
+ }
+ .satou-browser-dots{
+   left:57px;
+   top:11px;
+   gap:17px;
+   height:7px;
+ }
+ .satou-browser-dots span{width:7px;height:7px}
+ .satou-desktop-viewport{
+   left:13px;
+   top:27.1567px;
+   width:302px;
+   height:467px;
+   border-radius:18px;
+ }
+ .satou-desktop-viewport img{
+   width:269px;
+   height:auto;
+   margin-left:16px;
+ }
+ .satou-phone-frame{
+   position:absolute;
+   left:0;
+   top:529px;
+   width:328px;
+   height:596px;
+ }
+ .satou-phone-speaker{
+   left:86px;
+   top:19px;
+   width:34px;
+   height:3.3056px;
+ }
+ .satou-mobile-viewport{
+   left:17px;
+   top:37.5288px;
+   width:294px;
+   height:539.8194px;
+   border-radius:40px;
+ }
+ .satou-mobile-viewport img{
+   width:294px;
+   height:auto;
+ }
  .satou-result-copy{gap:20px}.satou-result-copy h3,.satou-result-copy p{font:500 20px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#fff}.satou-meta{font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;color:#fff}
 }
 
