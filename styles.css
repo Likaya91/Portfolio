@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,700&family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Roboto:wght@400;500;600&family=Unbounded:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,700&family=Inter:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Roboto:wght@400;500;600&family=Unbounded:wght@500;700;900&display=swap');
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:#141414}
@@ -418,6 +418,41 @@ body{min-width:320px}
 .mobile-only{display:none!important}
 
 
+
+.competitor-preview-grid{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:10px;
+}
+.competitor-preview-card{
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  flex:0 0 409.333px;
+  min-width:409.333px;
+  gap:10px;
+  background:rgba(245,243,239,.2);
+  border:1px solid rgba(0,0,0,.8);
+  overflow:hidden;
+}
+.competitor-preview-card img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:194 / 256.987;
+  object-fit:cover;
+}
+.competitor-preview-label{
+  min-height:39px;
+  padding:0 0 0 0;
+  display:flex;
+  align-items:flex-start;
+  font:500 16px/1.5 "Unbounded",Arial,sans-serif;
+  letter-spacing:0;
+  color:#0d0d0d;
+}
 .petro-card-grid{display:flex;width:100%;align-items:flex-start}
 .petro-info-card{
   box-sizing:border-box;
@@ -437,7 +472,7 @@ body{min-width:320px}
 }
 .petro-info-card h3{
   margin:0;
-  font:500 18px/1.5 "Inter",Arial,sans-serif;
+  font:700 18px/1.5 "Unbounded",Arial,sans-serif;
   letter-spacing:0;
   color:#0d0d0d;
 }
