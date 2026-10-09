@@ -526,6 +526,30 @@ body{min-width:320px}
   }
   .petro-section{height:auto;padding:30px 16px;gap:20px}
 
+
+  .competitor-preview-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:10px;
+    width:100%;
+  }
+  .competitor-preview-card{
+    width:100%;
+    min-width:0;
+    flex:none;
+    gap:10px;
+  }
+  .competitor-preview-card img{
+    width:100%;
+    height:auto;
+    aspect-ratio:100.667 / 133.351;
+    object-fit:cover;
+  }
+  .competitor-preview-label{
+    min-height:21px;
+    font:500 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Roboto,system-ui,Arial,sans-serif;
+    letter-spacing:0;
+  }
   .petro-card-grid{display:flex;flex-direction:column;gap:10px}
   .petro-info-card{
     width:100%;
