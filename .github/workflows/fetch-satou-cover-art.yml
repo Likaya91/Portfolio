@@ -1,0 +1,30 @@
+name: Fetch Satou cover art
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assets:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download clean Satou cover art
+        run: |
+          mkdir -p assets/satou
+          curl -L --fail --retry 3 -o assets/satou/cover-art-desktop.png "https://www.figma.com/api/mcp/asset/eb179b4f-f3aa-44b9-9e23-e603ddefd0b1.png"
+          curl -L --fail --retry 3 -o assets/satou/cover-art-mobile.png "https://www.figma.com/api/mcp/asset/756f6747-6321-46c9-adbb-823a503809ae.png"
+          test -s assets/satou/cover-art-desktop.png
+          test -s assets/satou/cover-art-mobile.png
+      - name: Commit Satou cover art
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/satou
+          git diff --cached --quiet || git commit -m "Add Satou clean cover art"
+          git push origin main
