@@ -418,16 +418,27 @@ body{min-width:320px}
   overflow-y:hidden;
   touch-action:pan-x;
 }
-.final-mobile-image{
-  display:block;
+.final-mobile-track{
+  position:relative;
   width:869px;
   min-width:869px;
-  max-width:none;
   height:475.1158px;
+}
+.final-mobile-shot{
+  position:absolute;
+  display:block;
+  width:235.8333px;
+  max-width:none;
+  height:auto;
   object-fit:contain;
   object-position:left top;
-  flex:0 0 869px;
+  -webkit-user-drag:none;
+  user-select:none;
+  pointer-events:none;
 }
+.final-mobile-home{left:0;top:0}
+.final-mobile-catalog{left:245.8333px;top:9.9463px}
+.final-mobile-product{left:491.6667px;top:62.98px}
 .mobile-only{display:none!important}
 
 
@@ -644,15 +655,19 @@ body{min-width:320px}
     width:100%;
     height:475.1158px;
   }
-  .final-mobile-image{
+  .final-mobile-track{
     width:869px;
     min-width:869px;
-    max-width:none;
     height:475.1158px;
-    object-fit:contain;
-    object-position:left top;
-    flex:0 0 869px;
   }
+  .final-mobile-shot{
+    width:235.8333px;
+    max-width:none;
+    height:auto;
+  }
+  .final-mobile-home{left:0;top:0}
+  .final-mobile-catalog{left:245.8333px;top:9.9463px}
+  .final-mobile-product{left:491.6667px;top:62.98px}
 }
 
 .petro-back svg{display:block;width:36px;height:17px}
