@@ -28,10 +28,23 @@
   <section class="petro-section petro-white">
     <div class="petro-label">КОНТЕКСТ</div>
     <h2 class="petro-title petro-title-lg">Задача и моя роль</h2>
-    <picture class="petro-artifact">
-      <source media="(max-width:767px)" srcset="assets/petroglif/task-mobile.png">
-      <img src="assets/petroglif/task-desktop.png" alt="Задача, роль и фокус проекта">
-    </picture>
+    <div class="petro-card-grid task-role-grid">
+      <article class="petro-info-card">
+        <div class="petro-card-kicker">ЗАДАЧА</div>
+        <h3>Спроектировать понятный путь к покупке</h3>
+        <p>Создать интернет-магазин, который помогает выбрать картину под интерьер, снижает сомнения перед покупкой и делает условия заказа прозрачными.</p>
+      </article>
+      <article class="petro-info-card">
+        <div class="petro-card-kicker">МОЯ РОЛЬ</div>
+        <h3>UX/UI designer полного цикла</h3>
+        <p>Проводила исследования и тестирование, формировала пользовательские сценарии, проектировала структуру и полностью собирала интерфейс в Figma.</p>
+      </article>
+      <article class="petro-info-card">
+        <div class="petro-card-kicker">РЕШЕНИЕ</div>
+        <h3>Выбор без неопределённости</h3>
+        <p>Особое внимание — визуальному сравнению работ, характеристикам, фильтрам, визуализации в интерьере, доставке и возврату.</p>
+      </article>
+    </div>
   </section>
 
   <section class="petro-section petro-ivory">
@@ -48,10 +61,23 @@
       <source media="(max-width:767px)" srcset="assets/petroglif/competitors-mobile.png">
       <img src="assets/petroglif/competitors-desktop.png" alt="Анализ конкурентов">
     </picture>
-    <picture class="petro-artifact">
-      <source media="(max-width:767px)" srcset="assets/petroglif/competitor-insights-mobile.png">
-      <img src="assets/petroglif/competitor-insights-desktop.png" alt="Выводы конкурентного анализа">
-    </picture>
+    <div class="petro-card-grid competitor-insights-grid">
+      <article class="petro-info-card">
+        <div class="petro-card-kicker">ВЫВОД 01</div>
+        <h3>Каталог должен помогать сравнивать</h3>
+        <p>Цена, размер и визуал работы должны считываться без открытия каждой карточки.</p>
+      </article>
+      <article class="petro-info-card">
+        <div class="petro-card-kicker">ВЫВОД 02</div>
+        <h3>Доверие строится на деталях</h3>
+        <p>Фото, условия доставки и возврата важны не меньше эстетики.</p>
+      </article>
+      <article class="petro-info-card">
+        <div class="petro-card-kicker">ВЫВОД 03</div>
+        <h3>Картина — главный визуальный объект</h3>
+        <p>Интерфейс должен поддерживать произведение, а не конкурировать с ним.</p>
+      </article>
+    </div>
   </section>
 
   <section class="petro-section petro-ivory">
@@ -68,10 +94,23 @@
     <div class="petro-label">03 / USER PERSONA</div>
     <h2 class="petro-title">Три модели поведения — один каталог</h2>
     <p class="petro-body-copy petro-body-copy-lg">Персоны показали разные скорости принятия решения: быстрый покупатель хочет минимум шагов, визуальный исследователь сравнивает и возвращается, осторожный пользователь ищет гарантии и подробности.</p>
-    <picture class="petro-artifact">
-      <source media="(max-width:767px)" srcset="assets/petroglif/persona-cards-mobile.png">
-      <img src="assets/petroglif/persona-cards-desktop.png" alt="Ключевые пользовательские персоны">
-    </picture>
+    <div class="petro-card-grid persona-insights-grid">
+      <article class="petro-info-card">
+        <div class="petro-card-kicker">АНДРЕЙ, 26</div>
+        <h3>Быстро решить конкретную задачу</h3>
+        <p>Нужны быстрый каталог, понятные фильтры, видимая цена и короткий checkout. Точки отказа: обязательная регистрация и неясная доставка.</p>
+      </article>
+      <article class="petro-info-card">
+        <div class="petro-card-kicker">ОЛЬГА, 33</div>
+        <h3>Найти «идеальную» работу</h3>
+        <p>Сравнивает варианты, ожидает качественные фото, zoom, похожие товары и визуализацию картины в интерьере.</p>
+      </article>
+      <article class="petro-info-card">
+        <div class="petro-card-kicker">КРИСТИНА, 40</div>
+        <h3>Сделать безопасную покупку</h3>
+        <p>Скрупулёзно изучает отзывы, возврат, доставку и информацию о компании. Может откладывать решение и возвращаться.</p>
+      </article>
+    </div>
     <picture class="petro-artifact">
       <source media="(max-width:767px)" srcset="assets/petroglif/persona-mobile.png">
       <img src="assets/petroglif/persona-desktop.png" alt="User Persona">
@@ -100,11 +139,20 @@
     <div class="petro-label">06 / УДАЛЁННОЕ МОДЕРИРУЕМОЕ ТЕСТИРОВАНИЕ</div>
     <h2 class="petro-title">Проверка сценария на пользователях</h2>
     <p class="petro-body-copy petro-body-copy-lg">Тестирование проходило удалённо в Zoom по заранее подготовленному сценарию с четырьмя пользователями. Все участники прошли сценарий, а замечания были проанализированы и приоритизированы для следующей итерации.</p>
-    <div class="desktop-only petro-testing-stack">
-      <img class="petro-artifact-img" src="assets/petroglif/testing-1-desktop.png" alt="Результаты пользовательского тестирования">
-      <img class="petro-artifact-img" src="assets/petroglif/testing-2-desktop.png" alt="Приоритизация результатов тестирования">
+    <div class="testing-layout">
+      <picture class="testing-panel testing-panel-a">
+        <source media="(max-width:767px)" srcset="assets/petroglif/testing-a-mobile.png">
+        <img src="assets/petroglif/testing-a-desktop.png" alt="Прототипы и сценарии пользовательского тестирования">
+      </picture>
+      <picture class="testing-panel testing-panel-b">
+        <source media="(max-width:767px)" srcset="assets/petroglif/testing-b-mobile.png">
+        <img src="assets/petroglif/testing-b-desktop.png" alt="Сессии удалённого модерируемого тестирования">
+      </picture>
+      <picture class="testing-panel testing-panel-c">
+        <source media="(max-width:767px)" srcset="assets/petroglif/testing-c-mobile.png">
+        <img src="assets/petroglif/testing-c-desktop.png" alt="Таблица результатов и приоритизации">
+      </picture>
     </div>
-    <img class="mobile-only petro-artifact-img" src="assets/petroglif/testing-mobile.png" alt="Результаты пользовательского тестирования">
   </section>
 
   <section class="petro-section petro-white">
@@ -121,10 +169,23 @@
     <div class="petro-label petro-label-light">РЕЗУЛЬТАТ</div>
     <h2 class="petro-title petro-title-light">Целостный UX/UI для выбора искусства онлайн</h2>
     <p class="petro-body-copy petro-body-light">Интерфейс сочетает галерейную подачу с понятной e-commerce логикой: пользователь может быстро ориентироваться в каталоге, сравнивать работы, изучать детали и уверенно двигаться к покупке.</p>
-    <picture class="petro-artifact">
-      <source media="(max-width:767px)" srcset="assets/petroglif/result-mobile.png">
-      <img src="assets/petroglif/result-desktop.png" alt="UX/UI результат проекта">
-    </picture>
+    <div class="petro-card-grid result-cards-grid">
+      <article class="petro-info-card petro-result-card">
+        <div class="petro-card-kicker">UX</div>
+        <h3>Меньше неопределённости</h3>
+        <p>Фильтры, характеристики, визуализация и прозрачные условия поддерживают решение о покупке.</p>
+      </article>
+      <article class="petro-info-card petro-result-card">
+        <div class="petro-card-kicker">UI</div>
+        <h3>Искусство остаётся главным</h3>
+        <p>Крупные изображения, спокойная палитра и редакционная типографика создают ощущение цифровой галереи.</p>
+      </article>
+      <article class="petro-info-card petro-result-card">
+        <div class="petro-card-kicker">СИСТЕМА</div>
+        <h3>Готово к масштабированию</h3>
+        <p>Единые компоненты и повторяемые паттерны позволяют развивать каталог, аккаунт и checkout.</p>
+      </article>
+    </div>
   </section>
 
   <section class="petro-section petro-ivory">
