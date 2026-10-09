@@ -743,7 +743,7 @@ body{min-width:320px}
 
 .satou-artifact,.satou-artifact img{display:block;width:100%;height:auto}.satou-list{padding-left:1.2em}
 .satou-scroll-x{width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab;touch-action:pan-x;user-select:none}.satou-scroll-x::-webkit-scrollbar{display:none}.satou-scroll-x.is-dragging{cursor:grabbing}.satou-scroll-x img{display:block;max-width:none;pointer-events:none;-webkit-user-drag:none}
-.satou-jtbd-scroll{height:330px}.satou-jtbd-scroll picture,.satou-jtbd-scroll img{display:block;width:1277px;height:327px}
+
 .satou-competitors-scroll{height:1145px}.satou-competitors-scroll picture,.satou-competitors-scroll img{display:block;width:1241px;height:1145px}
 .satou-userflow-scroll{height:650.64px}.satou-userflow-scroll picture,.satou-userflow-scroll img{display:block;width:1294px;height:650.64px}
 
@@ -863,7 +863,7 @@ body{min-width:320px}
  .satou-overview-grid h3{margin:0;font:500 24px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#dd8588}
  .satou-overview-grid p{margin:0;font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;color:#3a3a3a}
  .satou-accent h3,.satou-accent h2{font:500 24px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#fff}
- .satou-jtbd-scroll{height:84px}.satou-jtbd-scroll picture,.satou-jtbd-scroll img{width:328px;height:84px}
+ 
  .satou-competitors-scroll{height:585px}.satou-competitors-scroll picture,.satou-competitors-scroll img{width:328px;height:878px}
  .satou-userflow-scroll{height:317px}.satou-userflow-scroll picture,.satou-userflow-scroll img{width:629px;height:316px}
  .satou-mockup-section{padding:30px 16px!important;gap:20px!important}
@@ -1300,27 +1300,9 @@ body{min-width:320px}
   }
 
   /* 03 JTBD: frame FILL width, fixed 84px height; image STRETCH width */
-  .satou-jtbd-scroll{
-    width:100%;
-    height:84px;
-    overflow:hidden;
-    cursor:default;
-    touch-action:auto;
-  }
-  .satou-jtbd-scroll picture{
-    display:block;
-    width:100%;
-    height:84px;
-  }
-  .satou-jtbd-scroll img{
-    display:block;
-    width:100%;
-    min-width:100%;
-    max-width:none;
-    height:84px;
-    object-fit:fill;
-    object-position:left top;
-  }
+  
+  
+  
 
   /* 11 Mockups: vertical Auto Layout with exact 20px gap */
   .satou-mockups{
@@ -1464,4 +1446,49 @@ body{min-width:320px}
   aspect-ratio:auto;
   object-fit:contain;
   object-position:left top;
+}
+/* Satou JTBD: Figma viewport HUG section / HORIZONTAL overflow.
+   Both layouts use the original desktop illustration with intrinsic proportions. */
+.satou-page .satou-jtbd-scroll{
+  display:block;
+  width:100%;
+  min-width:0;
+  height:330px;
+  background:#fff;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+  touch-action:pan-x;
+  cursor:grab;
+}
+.satou-page .satou-jtbd-scroll > img{
+  display:block;
+  width:1277px;
+  min-width:1277px;
+  max-width:none;
+  height:auto;
+  margin-left:-5px;
+  margin-top:-1px;
+  object-fit:contain;
+  object-position:left top;
+  user-select:none;
+  -webkit-user-drag:none;
+  pointer-events:none;
+}
+@media (max-width:767px){
+  .satou-page .satou-jtbd-scroll{
+    width:100%;
+    height:169px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    touch-action:pan-x;
+  }
+  .satou-page .satou-jtbd-scroll > img{
+    width:auto;
+    min-width:0;
+    max-width:none;
+    height:169px;
+    margin:0;
+  }
 }
