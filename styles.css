@@ -1373,3 +1373,87 @@ body{min-width:320px}
     height:596px;
   }
 }
+
+/* Satou mobile mockups — latest Figma sizes */
+@media(max-width:767px){
+  .satou-mockup-section{
+    padding:30px 16px!important;
+    gap:20px!important;
+  }
+
+  .satou-mockups{
+    width:328px;
+    height:1005px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    align-items:flex-start;
+    gap:20px;
+  }
+
+  .satou-browser-frame{
+    position:relative;
+    flex:0 0 auto;
+    width:328px;
+    height:509px;
+    min-width:0;
+    max-width:none;
+    margin:0;
+    border-radius:34px;
+  }
+
+  .satou-browser-dots{
+    left:57px;
+    top:11px;
+    gap:17px;
+  }
+  .satou-browser-dots span{
+    width:7px;
+    height:7px;
+  }
+
+  .satou-desktop-viewport{
+    left:13px;
+    top:27.1567px;
+    width:302px;
+    height:467px;
+    border-radius:18px;
+  }
+
+  .satou-desktop-viewport img{
+    width:269px;
+    height:auto;
+    margin-left:16px;
+  }
+
+  .satou-phone-frame{
+    position:relative;
+    flex:0 0 auto;
+    width:261.9597px;
+    height:476px;
+    margin:0;
+    border-radius:46px;
+    background:#dd8588;
+  }
+
+  .satou-phone-speaker{
+    left:86px;
+    top:16px;
+    width:34px;
+    height:3.3056px;
+  }
+
+  .satou-mobile-viewport{
+    left:12px;
+    top:24.3818px;
+    width:238px;
+    height:437px;
+    border-radius:40px;
+  }
+
+  .satou-mobile-viewport img{
+    width:238px;
+    height:auto;
+    margin:0;
+  }
+}
