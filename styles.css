@@ -696,8 +696,8 @@ body{min-width:320px}
 /* SATOU case */
 .satou-body{margin:0;background:#fff;color:#3a3a3a}
 .satou-page{width:100%;max-width:1440px;margin:0 auto;overflow:hidden;background:#fff;font-family:"Open Sans",Arial,sans-serif;color:#3a3a3a}
-.satou-cover{position:relative;width:100%;background:#dd8588;overflow:hidden}
-.satou-cover picture{display:block;width:1440px;max-width:none}
+
+
 
 .satou-back{position:absolute;z-index:5;text-decoration:none}
 .satou-back-top{left:32px;top:10px;width:76px;height:38px;background:transparent}
@@ -837,7 +837,7 @@ body{min-width:320px}
 
 @media(max-width:767px){
  .satou-page{max-width:none;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Roboto,system-ui,Arial,sans-serif}
- .satou-cover picture{width:360px;max-width:none}
+ 
  
  .satou-back-top{left:16px;top:8px;width:62px;height:30px}
  .satou-back-bottom{left:16px;bottom:30px}
@@ -1057,9 +1057,7 @@ body{min-width:320px}
 }
 
 /* Satou responsive hardening */
-.satou-cover{
-  min-height:0;
-}
+
 .satou-cover picture,
 
 @media(min-width:768px){
@@ -1195,9 +1193,9 @@ body{min-width:320px}
 }
 
 /* Satou cover responsive artwork + fixed overlays */
-.satou-cover{position:relative;width:100%;aspect-ratio:1440/1068;overflow:hidden;background:#dd8588}
-.satou-cover-art,.satou-cover-art img{display:block;width:100%;height:100%}
-.satou-cover-art img{object-fit:fill}
+
+
+
 .satou-cover-back{position:absolute;left:69px;top:21px;width:72px;height:34px;display:flex;align-items:center;justify-content:center;z-index:10}
 .satou-cover-back svg{display:block;width:36px;height:17px}.satou-cover-back path{fill:#fff}
 .satou-cover-year{position:absolute;right:156px;bottom:74px;width:53px;height:35px;font:400 18px/1.5 "Manrope",Arial,sans-serif;color:#fff;white-space:nowrap;z-index:10}
@@ -1218,7 +1216,7 @@ body{min-width:320px}
   .satou-phone-frame{margin-left:0;margin-top:0}
 }
 @media(max-width:767px){
-  .satou-cover{aspect-ratio:360/267}
+  
   .satou-cover-back{left:8px;top:12px;width:72px;height:34px}
   .satou-cover-year{right:16px;bottom:12px;width:43px;height:24px;font:400 16px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif}
   .satou-mockup-section{padding:30px 16px!important;gap:20px!important}
@@ -1233,16 +1231,9 @@ body{min-width:320px}
 }
 
 /* Satou cover — exact Figma constraints */
-.satou-cover{
-  position:relative;
-  width:100%;
-  height:auto;
-  aspect-ratio:auto;
-  overflow:hidden;
-  background:#dd8588;
-}
-.satou-cover-art{display:block;width:100%;min-width:0;height:auto;}
-.satou-cover-art img{display:block;width:100%;min-width:0;max-width:100%;height:auto;object-fit:contain;object-position:left top;}
+
+
+
 .satou-cover-back{
   position:absolute;
   left:69px;
@@ -1268,21 +1259,9 @@ body{min-width:320px}
   z-index:10;
 }
 @media(max-width:767px){
-  .satou-cover{
-    width:100%;
-    height:auto;
-    aspect-ratio:auto;
-  }
-  .satou-cover-art{
-    width:100%;
-    height:auto;
-  }
-  .satou-cover-art img{
-    width:100%;
-    height:auto;
-    object-fit:contain;
-    object-position:left top;
-  }
+  
+  
+  
   .satou-cover-back{
     left:8px;
     top:12px;
@@ -1456,4 +1435,33 @@ body{min-width:320px}
     height:auto;
     margin:0;
   }
+}
+
+/* Satou hero artwork: scale full image with intrinsic aspect ratio.
+   Arrow and year are independent overlays; their CSS is unchanged. */
+.satou-page .satou-cover{
+  position:relative;
+  width:100%;
+  min-width:0;
+  height:auto;
+  aspect-ratio:auto;
+  overflow:hidden;
+  background:#dd8588;
+}
+.satou-page .satou-cover > picture.satou-cover-art{
+  display:block;
+  width:100%;
+  min-width:0;
+  height:auto;
+  line-height:0;
+}
+.satou-page .satou-cover > picture.satou-cover-art > img{
+  display:block;
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:left top;
 }
