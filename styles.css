@@ -1246,7 +1246,7 @@ body{min-width:320px}
 .satou-cover{
   position:relative;
   width:100%;
-  height:1068px;
+  height:auto;
   aspect-ratio:auto;
   overflow:hidden;
   background:#dd8588;
@@ -1254,14 +1254,14 @@ body{min-width:320px}
 .satou-cover-art{
   display:block;
   width:100%;
-  height:1068px;
+  height:auto;
 }
 .satou-cover-art img{
   display:block;
   width:100%;
-  height:1068px;
+  height:auto;
   max-width:none;
-  object-fit:fill;
+  object-fit:contain;
   object-position:left top;
 }
 .satou-cover-back{
@@ -1291,17 +1291,17 @@ body{min-width:320px}
 @media(max-width:767px){
   .satou-cover{
     width:100%;
-    height:267px;
+    height:auto;
     aspect-ratio:auto;
   }
   .satou-cover-art{
     width:100%;
-    height:267px;
+    height:auto;
   }
   .satou-cover-art img{
     width:100%;
-    height:267px;
-    object-fit:fill;
+    height:auto;
+    object-fit:contain;
     object-position:left top;
   }
   .satou-cover-back{
