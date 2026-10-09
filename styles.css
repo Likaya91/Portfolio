@@ -707,6 +707,7 @@ body{min-width:320px}
 .satou-light{background:#fff;padding:84px 96px;gap:11px}
 .satou-white{background:#fff;padding:70px 96px;gap:42px}
 .satou-accent{background:#dd8588;padding:56px 96px;gap:10px;color:#fff}
+.satou-requirements{background:#faeded;padding:70px 96px;gap:42px}
 .satou-persona{background:#fff;padding:70px 96px;gap:72px}
 .satou-jtbd{background:#dd8588;padding:64px 72px 64px 96px;gap:40px;color:#fff}
 .satou-competitors{background:#fefefe;padding:61px 96px;gap:52px}
@@ -721,8 +722,18 @@ body{min-width:320px}
 .satou-accent h3,.satou-accent h2{margin:0;font-family:"Manrope",Arial,sans-serif;font-weight:500;color:#fff}.satou-accent h3{font-size:26px;line-height:1.5}.satou-accent h2{font-size:42px;line-height:1.5}
 
 .satou-overview-grid{display:flex;flex-wrap:wrap;gap:39px;width:100%}
-.satou-overview-grid article{flex:1 1 310px;min-width:310px;max-width:390px}
-.satou-overview-grid h3{margin:0 0 18px;font:500 26px/1.5 "Manrope",Arial,sans-serif;color:#dd8588}
+.satou-overview-grid article{
+  box-sizing:border-box;
+  flex:0 0 390px;
+  width:390px;
+  min-height:403px;
+  padding:38px 20px;
+  background:#faeded;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.satou-overview-grid h3{margin:0;font:500 26px/1.5 "Manrope",Arial,sans-serif;color:#dd8588}
 .satou-overview-grid p{margin:0;font:400 18px/1.5 "Open Sans",Arial,sans-serif;color:#3a3a3a}
 
 .satou-artifact,.satou-artifact img{display:block;width:100%;height:auto}.satou-list{padding-left:1.2em}
@@ -741,14 +752,22 @@ body{min-width:320px}
  .satou-back-top{left:16px;top:8px;width:62px;height:30px}
  .satou-back-bottom{left:16px;bottom:30px}
  .satou-section{height:auto!important;padding:30px 16px!important;gap:20px!important}
- .satou-overview,.satou-persona,.satou-competitors,.satou-solution-section,.satou-userflow-section,.satou-jtbd,.satou-result{padding:30px 16px!important}
+ .satou-overview,.satou-requirements,.satou-persona,.satou-competitors,.satou-solution-section,.satou-userflow-section,.satou-jtbd,.satou-result{padding:30px 16px!important}
+ .satou-requirements{background:#faeded!important;gap:20px!important}
  .satou-xl{font:500 32px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif}
  .satou-h2{font:500 26px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif}
  .satou-lead,.satou-copy,.satou-list{font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif}
  .satou-overview-grid{flex-direction:column;gap:10px}
- .satou-overview-grid article{min-width:0;max-width:none;width:100%}
- .satou-overview-grid h3{margin:0 0 10px;font:500 24px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#dd8588}
- .satou-overview-grid p{font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;color:#3a3a3a}
+ .satou-overview-grid article{
+   width:100%;
+   min-width:0;
+   min-height:0;
+   padding:38px 20px;
+   background:#faeded;
+   gap:10px;
+ }
+ .satou-overview-grid h3{margin:0;font:500 24px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#dd8588}
+ .satou-overview-grid p{margin:0;font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;color:#3a3a3a}
  .satou-accent h3,.satou-accent h2{font:500 24px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#fff}
  .satou-jtbd-scroll{height:84px}.satou-jtbd-scroll picture,.satou-jtbd-scroll img{width:328px;height:84px}
  .satou-competitors-scroll{height:585px}.satou-competitors-scroll picture,.satou-competitors-scroll img{width:328px;height:878px}
@@ -758,3 +777,17 @@ body{min-width:320px}
  .satou-mobile-viewport{width:294px;height:539.82px;align-self:center}.satou-mobile-viewport img{width:294px;height:4115.25px}
  .satou-result-copy{gap:20px}.satou-result-copy h3,.satou-result-copy p{font:500 20px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Display",Roboto,system-ui,Arial,sans-serif;color:#fff}.satou-meta{font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,system-ui,Arial,sans-serif;color:#fff}
 }
+
+/* Satou text rhythm audit */
+.satou-requirements .satou-h2,
+.satou-persona .satou-h2,
+.satou-jtbd .satou-h2,
+.satou-competitors .satou-h2,
+.satou-userflow-section .satou-h2{margin-bottom:0}
+.satou-requirements .satou-copy,
+.satou-persona .satou-copy,
+.satou-jtbd .satou-copy,
+.satou-competitors .satou-copy,
+.satou-userflow-section .satou-copy{margin-top:0}
+.satou-solution-section .satou-copy{margin:0}
+.satou-result-copy>*{margin:0}
