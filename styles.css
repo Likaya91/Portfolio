@@ -698,7 +698,7 @@ body{min-width:320px}
 .satou-page{width:100%;max-width:1440px;margin:0 auto;overflow:hidden;background:#fff;font-family:"Open Sans",Arial,sans-serif;color:#3a3a3a}
 .satou-cover{position:relative;width:100%;background:#dd8588;overflow:hidden}
 .satou-cover picture{display:block;width:1440px;max-width:none}
-.satou-cover img{display:block;width:1440px;max-width:none;height:auto}
+
 .satou-back{position:absolute;z-index:5;text-decoration:none}
 .satou-back-top{left:32px;top:10px;width:76px;height:38px;background:transparent}
 .satou-back-bottom{left:96px;bottom:25px;width:36px;height:17px}
@@ -838,7 +838,7 @@ body{min-width:320px}
 @media(max-width:767px){
  .satou-page{max-width:none;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Roboto,system-ui,Arial,sans-serif}
  .satou-cover picture{width:360px;max-width:none}
- .satou-cover img{width:360px;max-width:none;height:auto}
+ 
  .satou-back-top{left:16px;top:8px;width:62px;height:30px}
  .satou-back-bottom{left:16px;bottom:30px}
  .satou-section{height:auto!important;padding:30px 16px!important;gap:20px!important}
@@ -1061,24 +1061,14 @@ body{min-width:320px}
   min-height:0;
 }
 .satou-cover picture,
-.satou-cover img{
-  flex:none;
-}
+
 @media(min-width:768px){
   .satou-cover picture,
-  .satou-cover img{
-    width:1440px;
-    min-width:1440px;
-    max-width:none;
-  }
+  
 }
 @media(max-width:767px){
   .satou-cover picture,
-  .satou-cover img{
-    width:360px;
-    min-width:360px;
-    max-width:none;
-  }
+  
 }
 
 /* Requirements as real HTML: typography never scales with the image */
@@ -1251,19 +1241,8 @@ body{min-width:320px}
   overflow:hidden;
   background:#dd8588;
 }
-.satou-cover-art{
-  display:block;
-  width:100%;
-  height:auto;
-}
-.satou-cover-art img{
-  display:block;
-  width:100%;
-  height:auto;
-  max-width:none;
-  object-fit:contain;
-  object-position:left top;
-}
+.satou-cover-art{display:block;width:100%;min-width:0;height:auto;}
+.satou-cover-art img{display:block;width:100%;min-width:0;max-width:100%;height:auto;object-fit:contain;object-position:left top;}
 .satou-cover-back{
   position:absolute;
   left:69px;
