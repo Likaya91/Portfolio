@@ -1498,3 +1498,39 @@ body{min-width:320px}
     margin:0;
   }
 }
+
+/* Satou full-bleed section backgrounds */
+.satou-body{
+  overflow-x:hidden;
+}
+
+.satou-page{
+  overflow:visible;
+  background:transparent;
+}
+
+.satou-cover,
+.satou-section{
+  position:relative;
+  z-index:0;
+}
+
+/* Continue each section's own background color to the viewport edges */
+.satou-cover::before,
+.satou-section::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:100vw;
+  transform:translateX(-50%);
+  background:inherit;
+  z-index:-1;
+  pointer-events:none;
+}
+
+/* Cover uses the Satou accent beyond the 1440px content frame */
+.satou-cover::before{
+  background:#dd8588;
+}
