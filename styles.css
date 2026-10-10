@@ -1866,3 +1866,62 @@ body{min-width:320px}
     border-radius:0 0 6.4% 6.4%;
   }
 }
+
+/* Psychologist desktop hero header — Figma STRETCH + auto gap */
+@media(min-width:768px){
+  .psy-cover-nav{
+    position:absolute;
+    left:231px;
+    right:231px;
+    top:23px;
+    width:auto;
+    height:63px;
+    transform:none;
+    padding:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:0;
+  }
+
+  .psy-nav-item{
+    display:flex;
+    align-items:center;
+    flex:0 0 auto;
+    gap:15px;
+    font:300 14px/1.5 "Manrope",Arial,sans-serif;
+  }
+
+  .psy-nav-item svg{
+    display:block;
+    flex:0 0 auto;
+    width:60px;
+    height:60px;
+  }
+
+  .psy-nav-item:first-child{
+    width:167px;
+    min-width:167px;
+    height:63px;
+  }
+
+  .psy-nav-item:nth-child(2){
+    width:168px;
+    min-width:168px;
+    height:60px;
+  }
+
+  .psy-nav-item:last-child{
+    width:165px;
+    min-width:165px;
+    height:51px;
+  }
+
+  .psy-nav-full{
+    display:inline;
+  }
+
+  .psy-nav-short{
+    display:none;
+  }
+}
