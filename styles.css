@@ -1730,3 +1730,139 @@ body{min-width:320px}
 
 /* full-bleed backgrounds */
 .psy-cover,.psy-section,.psy-process{background-clip:padding-box}
+
+/* Psychologist desktop responsiveness — exact Figma constraints */
+@media(min-width:768px){
+  /* Hero frame is FILL, background stays 1440x901 and is anchored left/top */
+  .psy-cover{
+    width:100%;
+    height:900px;
+    overflow:hidden;
+  }
+  .psy-cover-bg{
+    position:absolute;
+    left:0;
+    top:-1px;
+    width:1440px;
+    height:901px;
+  }
+  .psy-cover-bg img{
+    display:block;
+    width:1440px;
+    height:901px;
+    max-width:none;
+    object-fit:none;
+    object-position:left top;
+  }
+
+  /* Header content stays fixed-size instead of scaling with the viewport */
+  .psy-cover-nav{
+    left:50%;
+    top:23px;
+    width:978px;
+    height:63px;
+    transform:translateX(-50%);
+  }
+  .psy-cover-nav img{
+    width:978px;
+    height:63px;
+    max-width:none;
+    object-fit:none;
+  }
+
+  /* CENTER constraints from Figma */
+  .psy-cover-title{
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+  }
+  .psy-cover-main{
+    position:absolute;
+    left:calc(50% - 342px);
+    top:211px;
+    width:499px;
+    height:144px;
+    margin:0;
+    font-size:96px;
+    line-height:1.5;
+    white-space:nowrap;
+  }
+  .psy-cover-sub{
+    position:absolute;
+    left:calc(50% + 76px);
+    top:327px;
+    width:267px;
+    height:60px;
+    margin:0;
+    font-size:40px;
+    line-height:1.5;
+    white-space:nowrap;
+  }
+  .psy-cover-year{
+    right:66px;
+    top:831px;
+    bottom:auto;
+    width:60px;
+    height:29px;
+    font-size:24px;
+    line-height:1.5;
+  }
+
+  /* Project cards: Figma HORIZONTAL + WRAP */
+  .psy-project-grid{
+    display:flex;
+    flex-flow:row wrap;
+    column-gap:88px;
+    row-gap:50px;
+    width:100%;
+    align-items:flex-start;
+  }
+  .psy-project-card{
+    flex:0 0 580px;
+    width:580px;
+    min-width:580px;
+    height:570px;
+  }
+
+  /* Laptop group scales proportionally with available width */
+  .psy-laptop-stage{
+    position:relative;
+    width:100%;
+    max-width:1248px;
+    aspect-ratio:1248 / 897.45105;
+    height:auto;
+  }
+  .psy-laptop{
+    position:absolute;
+    left:3.56344%;
+    top:0;
+    width:92.8011%;
+    height:auto;
+    aspect-ratio:1158.15784 / 817.81793;
+    border-radius:2.9357%;
+  }
+  .psy-screen{
+    position:absolute;
+    left:1.72688%;
+    top:1.83415%;
+    width:96.5463%;
+    height:auto;
+    aspect-ratio:1118.15784 / 785.62018;
+    border-radius:1.6098%;
+  }
+  .psy-screen img{
+    display:block;
+    width:100%;
+    max-width:none;
+    height:auto;
+  }
+  .psy-laptop-base{
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:5.56535%;
+    border-radius:0 0 6.4% 6.4%;
+  }
+}
