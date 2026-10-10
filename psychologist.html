@@ -127,10 +127,7 @@
       <div class="psy-laptop">
         <div class="psy-screen">
           <div class="psy-scroll-placeholder">Изображение для вертикального скролла</div>
-          <picture>
-            <source media="(max-width:767px)" srcset="assets/psychologist/psychologist-mobile-scroll.png">
-            <img src="assets/psychologist/psychologist-desktop-scroll.png" alt="Полный макет лендинга для психолога" onerror="this.style.display='none'">
-          </picture>
+          <img class="psy-scroll-image" src="assets/psychologist/psychologist-desktop-scroll.png" alt="Полный макет лендинга для психолога" draggable="false" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
         </div>
       </div>
       <div class="psy-laptop-base"></div>
