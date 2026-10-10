@@ -2136,11 +2136,10 @@ body{min-width:320px}
     margin-right:calc(50% - 50vw);
     overflow:hidden;
   }
-  .psy-page .psy-type-one strong{
-    left:calc(50% - 242px);
-  }
+  .psy-page .psy-type-one strong,
   .psy-page .psy-type-two strong{
-    left:calc(50% - 284px);
+    left:50%;
+    transform:translateX(-50%);
   }
   .psy-page .psy-palette{
     left:50%;
