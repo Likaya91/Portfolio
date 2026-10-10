@@ -1958,3 +1958,106 @@ body{min-width:320px}
     object-position:center center;
   }
 }
+
+/* Psychologist mobile — final Figma spacing + scalable centered visual blocks */
+@media(max-width:767px){
+  /* Figma mobile sections: 30/16 padding and 20px between major blocks */
+  .psy-section{
+    padding:30px 16px!important;
+    gap:20px!important;
+  }
+  .psy-heading,
+  .psy-result-copy,
+  .psy-result-bottom{
+    gap:20px!important;
+  }
+  .psy-project-grid{
+    gap:10px;
+  }
+  .psy-project-card{
+    gap:20px;
+  }
+  .psy-project-card > div{
+    gap:10px;
+  }
+
+  /* Visual system: FILL horizontally, centered, fixed Figma height */
+  .psy-visual .psy-type-samples{
+    position:relative;
+    width:100%;
+    max-width:328px;
+    height:230.3406px;
+    margin-inline:auto;
+    overflow:hidden;
+  }
+  .psy-palette{
+    position:absolute;
+    top:119px;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:328px;
+    height:105.3406px;
+    margin:0;
+    display:flex;
+    align-items:stretch;
+    justify-content:flex-start;
+  }
+  .psy-palette div{
+    flex:1 1 0;
+    width:auto;
+    min-width:0;
+    height:100%;
+    padding:0 2px 38px;
+    border-radius:20px;
+    font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,Arial,sans-serif;
+    justify-content:center;
+    align-items:flex-end;
+    overflow:hidden;
+  }
+  .psy-palette div+div{
+    margin-left:-10px;
+  }
+
+  /* Laptop: FILL width, proportional scale, centered */
+  .psy-laptop-stage{
+    position:relative;
+    width:100%;
+    max-width:328px;
+    height:auto;
+    aspect-ratio:328 / 219.6093;
+    margin-inline:auto;
+  }
+  .psy-laptop{
+    position:absolute;
+    left:3.65854%;
+    top:0;
+    width:92.37805%;
+    height:auto;
+    aspect-ratio:303 / 199;
+    border-radius:2.31%;
+  }
+  .psy-screen{
+    position:absolute;
+    left:3.9604%;
+    top:4.0201%;
+    width:92.1763%;
+    height:auto;
+    aspect-ratio:279.29413 / 183.0258;
+    border-radius:1.52%;
+  }
+  .psy-screen img{
+    display:block;
+    width:100%;
+    max-width:none;
+    height:auto;
+  }
+  .psy-laptop-base{
+    left:0;
+    right:auto;
+    bottom:0;
+    width:100%;
+    height:5.464%;
+    border-radius:0 0 6.1% 6.1%;
+  }
+}
