@@ -5,14 +5,20 @@ html,body{margin:0;padding:0;background:#141414}
 a{color:inherit}
 body{min-width:320px}
 
-.portfolio-home{
-  width:100%;
-  max-width:1440px;
-  margin:0 auto;
+.home-body{
+  min-height:100vh;
   background-color:#141414;
   background-image:url("assets/noise.svg");
   background-repeat:repeat;
   background-size:180px 180px;
+  background-attachment:fixed;
+}
+
+.portfolio-home{
+  width:100%;
+  max-width:1440px;
+  margin:0 auto;
+  background:transparent;
   color:#fff;
   display:flex;
   flex-direction:column;
