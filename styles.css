@@ -1654,7 +1654,7 @@ body{min-width:320px}
 @media(max-width:767px){
   .psy-page{max-width:none;font-family:"Inter",Arial,sans-serif}
   .psy-cover{height:407px}
-  .psy-cover-bg img{object-fit:none;width:1440px;height:901px;object-position:left top}
+  .psy-cover-bg img{width:100%;height:100%;object-fit:cover;object-position:center center}
   .psy-cover-nav{left:0;top:65px;width:100%;height:30px;padding:0 16px;justify-content:space-between}
   .psy-nav-item{font:400 12px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,Arial,sans-serif;gap:10px}
   .psy-nav-item svg{width:30px;height:30px}
@@ -1984,10 +1984,11 @@ body{min-width:320px}
   /* Visual system: FILL horizontally, centered, fixed Figma height */
   .psy-visual .psy-type-samples{
     position:relative;
-    width:100%;
-    max-width:328px;
+    width:100vw;
+    max-width:none;
     height:230.3406px;
-    margin-inline:auto;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
     overflow:hidden;
   }
   .psy-palette{
@@ -2059,5 +2060,92 @@ body{min-width:320px}
     width:100%;
     height:5.464%;
     border-radius:0 0 6.1% 6.1%;
+  }
+}
+
+/* Psychologist mobile: Figma-specific image crop, centered title,
+   full-bleed decorative letterforms. Desktop is unchanged. */
+@media (max-width:767px){
+  .psy-page .psy-cover{
+    position:relative;
+    width:100%;
+    height:407px;
+    overflow:hidden;
+    background:#f1eee9;
+  }
+  .psy-page .psy-cover > picture.psy-cover-bg{
+    position:absolute;
+    inset:0;
+    left:0;
+    top:0;
+    transform:none;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+  }
+  .psy-page .psy-cover > picture.psy-cover-bg > img{
+    display:block;
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+  }
+  .psy-page .psy-cover-title{
+    position:absolute;
+    top:164px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:calc(100% - 32px);
+    max-width:328px;
+    height:auto;
+    margin:0;
+    text-align:center;
+  }
+  .psy-page .psy-cover-main{
+    position:static;
+    display:block;
+    width:auto;
+    height:auto;
+    margin:0;
+    white-space:nowrap;
+    font:400 40px/1.1 "Cormorant",Georgia,serif;
+  }
+  .psy-page .psy-cover-sub{
+    position:static;
+    display:block;
+    width:auto;
+    height:auto;
+    margin:0;
+    white-space:nowrap;
+    font:400 24px/1.15 -apple-system,BlinkMacSystemFont,"SF Pro Text",Roboto,Arial,sans-serif;
+  }
+  .psy-page .psy-visual .psy-type-samples{
+    position:relative;
+    width:100vw;
+    max-width:none;
+    height:230.3406px;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+    overflow:hidden;
+  }
+  .psy-page .psy-type-one strong{
+    left:calc(50% - 242px);
+  }
+  .psy-page .psy-type-two strong{
+    left:calc(50% - 284px);
+  }
+  .psy-page .psy-palette{
+    left:50%;
+    width:calc(100% - 32px);
+    max-width:328px;
+    transform:translateX(-50%);
   }
 }
