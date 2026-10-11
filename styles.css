@@ -2148,3 +2148,43 @@ body{min-width:320px}
     transform:translateX(-50%);
   }
 }
+
+/* Psychologist mobile laptop — stretch with viewport width, preserve proportions */
+@media(max-width:767px){
+  .psy-final .psy-laptop-stage{
+    width:100%;
+    max-width:none;
+    min-width:0;
+    height:auto;
+    aspect-ratio:328 / 219.6093;
+    margin-inline:auto;
+    align-self:stretch;
+  }
+
+  .psy-final .psy-laptop{
+    left:3.65854%;
+    top:0;
+    width:92.37805%;
+    height:auto;
+    aspect-ratio:303 / 199;
+  }
+
+  .psy-final .psy-screen{
+    left:3.9604%;
+    top:4.0201%;
+    width:92.1763%;
+    height:auto;
+    aspect-ratio:279.29413 / 183.0258;
+  }
+
+  .psy-final .psy-screen img{
+    width:100%;
+    height:auto;
+    max-width:none;
+  }
+
+  .psy-final .psy-laptop-base{
+    width:100%;
+    height:5.464%;
+  }
+}
