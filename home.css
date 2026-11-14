@@ -1,0 +1,395 @@
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url(assets/home/manrope-cyrillic-wght-normal.woff2) format('woff2');
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url(assets/home/manrope-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url(assets/home/cormorant-garamond-cyrillic-wght-normal.woff2) format('woff2');
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url(assets/home/cormorant-garamond-latin-wght-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('assets/maestro/inter-cyrillic-wght-normal.woff2') format('woff2');
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('assets/maestro/inter-latin-wght-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #141414; }
+a { color: inherit; }
+
+.home-body{
+  min-height:100vh;
+  background-color:#141414;
+  background-image:url("assets/noise.svg");
+  background-repeat:repeat;
+  background-size:180px 180px;
+  background-attachment:fixed;
+}
+
+.portfolio-home{
+  --page-gutter:clamp(24px,4.445vw,64px);
+  width:100%;
+  max-width:1440px;
+  margin:0 auto;
+  background:transparent;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  padding-bottom:70px;
+  overflow:hidden;
+  font-family:"Manrope",Arial,sans-serif
+}
+
+.portfolio-nav{
+  width:100%;
+  height:61px;
+  padding:20px var(--page-gutter);
+  border-bottom:1px solid rgba(255,255,255,.1);
+  display:flex;
+  align-items:center
+}
+.nav-logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:rgba(255,255,255,.4);
+  font:500 14px/1.5 "Manrope",Arial,sans-serif;
+  white-space:nowrap
+}
+.nav-dot{
+  width:6px;height:6px;border-radius:50%;background:#d0522c;flex:0 0 6px
+}
+
+.hero-headline{
+  height:auto;
+  padding:28px clamp(40px,8.06vw,116px) 0 var(--page-gutter)
+}
+.hero-headline h1{
+  margin:0;
+  font:400 clamp(44px,5vw,72px)/1.2 "Cormorant Garamond",Georgia,serif;
+  color:#fff
+}
+
+.hero-info{
+  height:auto;
+  padding:20px var(--page-gutter) 0;
+  display:flex;
+  flex-flow:row wrap;
+  align-items:center;
+  align-content:center;
+  row-gap:40px
+}
+.portrait-slot{
+  width:231px;
+  height:259px;
+  flex:0 0 231px;
+  overflow:hidden;
+  border-radius:6px
+}
+.portrait-image{
+  display:block;
+  width:194px;
+  height:259px;
+  object-fit:cover;
+  border-radius:6px
+}
+
+.about-block{
+  width:min(600px,100%);
+  flex:0 1 600px;
+  display:flex;
+  flex-direction:column;
+  gap:10px
+}
+.about-block h2{
+  margin:0;
+  font:400 20px/1.5 "Manrope",Arial,sans-serif;
+  color:#fff
+}
+.about-copy{
+  width:100%;
+  color:rgba(255,255,255,.6);
+  font:400 16px/1.5 "Manrope",Arial,sans-serif
+}
+.about-copy p{margin:0}
+
+.mobile-contacts{display:none}
+
+.desktop-contacts{
+  width:min(481px,100%);
+  flex:0 1 481px;
+  padding-left:50px
+}
+.contact-row{
+  width:min(424px,100%);
+  min-height:42px;
+  border-top:1px solid rgba(255,255,255,.1);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 0
+}
+.contact-row>span{
+  font:700 12px/1.5 "Manrope",Arial,sans-serif;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.4);
+  white-space:nowrap
+}
+.contact-row>a{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  font:500 18px/1.5 "Cormorant Garamond",Georgia,serif;
+  color:#d0522c;
+  white-space:nowrap
+}
+.contact-row>a span{
+  text-decoration:underline;
+  text-underline-position:from-font
+}
+.contact-row>a img{
+  display:block;
+  width:18px;
+  height:22px
+}
+.contact-phone{
+  border-bottom:1px solid rgba(255,255,255,.1)
+}
+.contact-phone>a{
+  width:138px;
+  color:#fff;
+  font-feature-settings:"lnum" 1,"pnum" 1
+}
+
+.works-strip {
+  display: flex;
+  gap: 12px;
+  padding: 24px var(--page-gutter) 8px;
+  border-top: 1px solid rgb(255 255 255 / .1);
+  overflow-x: auto;
+  scroll-padding-inline: var(--page-gutter);
+  scrollbar-width: thin;
+  scrollbar-color: #505050 transparent;
+}
+
+.case-card {
+  flex: 0 0 min(490px, 75vw);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.case-picture {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 429.333 / 230;
+  border-radius: 4px;
+  overflow: hidden;
+  outline: 1px solid rgb(255 255 255 / .2);
+  outline-offset: -1px;
+}
+
+.case-picture img {
+  position: absolute;
+  display: block;
+  left: var(--image-left);
+  top: var(--image-top);
+  width: var(--image-width);
+  height: var(--image-height);
+}
+
+.maestro-card .case-picture {
+  background: #061d25;
+  --image-left: 10.87%;
+  --image-top: -3.9%;
+  --image-width: 77.57%;
+  --image-height: 107.9%;
+}
+.petroglif-card .case-picture {
+  --image-left: .05%;
+  --image-top: .15%;
+  --image-width: 100.08%;
+  --image-height: 101.94%;
+}
+.satou-card .case-picture {
+  --image-left: -.18%;
+  --image-top: -7.16%;
+  --image-width: 99.84%;
+  --image-height: 137.64%;
+}
+.psychologist-card .case-picture {
+  --image-left: -.12%;
+  --image-top: .11%;
+  --image-width: 100.08%;
+  --image-height: 116.6%;
+}
+
+.case-label {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding-top: 10px;
+  color: rgb(255 255 255 / .4);
+  font: 600 12px/1.5 Manrope, Arial, sans-serif;
+  text-transform: uppercase;
+}
+.case-label::before {
+  content: "";
+  flex: 0 0 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d0522c;
+}
+
+.works-strip:focus-visible,.case-card:focus-visible,.contact-row a:focus-visible,.mobile-contacts a:focus-visible{
+  outline:2px solid #d0522c;
+  outline-offset:3px
+}
+
+@media(max-width:767px){
+  .portfolio-home{
+    --page-gutter:16px;
+    max-width:none;
+    width:100%;
+    gap:20px;
+    padding-bottom:70px;
+    font-family:Inter,Arial,sans-serif
+  }
+
+  .portfolio-nav{
+    height:53px;
+    padding:20px 16px
+  }
+  .nav-logo{
+    font-family:Inter,Arial,sans-serif;
+    font-size:11px;
+    line-height:13px
+  }
+
+  .hero-headline{
+    height:auto;
+    padding:0 16px
+  }
+  .hero-headline h1{
+    font-family:Inter,Arial,sans-serif;
+    font-size:24px;
+    font-weight:500;
+    line-height:1.2;
+    letter-spacing:0
+  }
+
+  .hero-info{
+    height:auto;
+    padding:0 16px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    align-items:flex-start;
+    align-content:stretch;
+    gap:20px
+  }
+  .portrait-slot{
+    width:100%;
+    height:259px;
+    flex:0 0 259px;
+    border-radius:0
+  }
+  .portrait-image{
+    width:194px;
+    height:259px
+  }
+
+  .about-block{
+    width:100%;
+    height:auto;
+    flex:0 0 auto;
+    gap:10px
+  }
+  .about-block h2{
+    width:100%;
+    font-family:Inter,Arial,sans-serif;
+    font-size:16px;
+    font-weight:500;
+    line-height:1.2
+  }
+
+  .mobile-contacts{
+    height:21px;
+    display:flex;
+    align-items:center;
+    gap:10px
+  }
+  .mobile-contacts a{
+    font:400 14px/1.5 Inter,Arial,sans-serif;
+    letter-spacing:1px;
+    color:rgba(208,82,44,.8);
+    text-decoration:underline;
+    text-transform:uppercase
+  }
+
+  .about-copy{
+    width:100%;
+    color:rgba(255,255,255,.6);
+    font:400 16px/1.5 Inter,Arial,sans-serif
+  }
+
+  .desktop-contacts{display:none}
+
+  .works-strip {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+  .case-card { width: min(100%, 640px); flex: none; }
+  .case-picture { aspect-ratio: 328 / 190; }
+  .maestro-card .case-picture {
+    aspect-ratio: 334 / 177;
+    --image-left: 11.36%;
+    --image-top: -4.98%;
+    --image-width: 77.62%;
+    --image-height: 109.14%;
+  }
+  .satou-card .case-picture { --image-left: -6.29%; --image-width: 108.06%; }
+  .psychologist-card .case-picture { --image-left: -5%; --image-width: 108.32%; }
+  .case-label { font: 400 14px/1.5 Inter, Arial, sans-serif; }
+}

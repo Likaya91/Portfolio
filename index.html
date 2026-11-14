@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Анжелика Кузнецова — UX/UI Portfolio</title>
   <meta name="description" content="UX/UI portfolio Анжелики Кузнецовой">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
 </head>
 <body class="home-body">
   <main class="portfolio-home">
@@ -22,10 +22,7 @@
 
     <section class="hero-info">
       <div class="portrait-slot">
-        <picture>
-          <source media="(max-width: 767px)" srcset="assets/home/portrait-mobile.png?v=3x2">
-          <img class="portrait-image" src="assets/home/portrait-desktop.png?v=3x2" alt="Анжелика Кузнецова">
-        </picture>
+        <img class="portrait-image" src="assets/home/home-portrait.webp" alt="Анжелика Кузнецова" width="194" height="259">
       </div>
 
       <div class="about-block">
@@ -66,48 +63,33 @@
       </aside>
     </section>
 
-    <section class="works-strip" aria-label="Кейсы">
+    <section class="works-strip" aria-label="Кейсы" tabindex="0">
       <a class="case-card maestro-card" href="maestro.html">
-        <picture class="case-picture">
-          <img src="assets/maestro/card.webp" alt="">
-        </picture>
-        <span class="case-label">
-          <strong>MAESTRO</strong>
-          <span>Дизайн-концепт мобильного приложения iOS</span>
-        </span>
+        <div class="case-picture">
+          <img src="assets/home/home-maestro.webp" alt="">
+        </div>
+        <span class="case-label">Дизайн-концепт мобильного приложения iOS</span>
       </a>
 
-      <a class="case-card" href="petroglif.html">
-        <picture class="case-picture">
-          <source media="(max-width: 767px)" srcset="assets/home/case1-mobile.png?v=3x2">
-          <img src="assets/home/case1-desktop.png?v=3x2" alt="E-commerce интерьерные картины">
-        </picture>
-        <span class="case-label">
-          <strong>Кейс 01</strong>
-          <span>E-commerce интерьерные картины</span>
-        </span>
+      <a class="case-card petroglif-card" href="petroglif.html">
+        <div class="case-picture">
+          <img src="assets/home/home-petroglif.webp" alt="">
+        </div>
+        <span class="case-label">E-commerce интерьерные картины</span>
       </a>
 
-      <a class="case-card" href="satou.html">
-        <picture class="case-picture">
-          <source media="(max-width: 767px)" srcset="assets/home/case2-mobile.png?v=3x2">
-          <img src="assets/home/case2-desktop.png?v=3x2" alt="Лэндинг для PR-агентства Satou">
-        </picture>
-        <span class="case-label">
-          <strong>Кейс 02</strong>
-          <span>Лэндинг для PR-агентства. хакатон, командная работа</span>
-        </span>
+      <a class="case-card satou-card" href="satou.html">
+        <div class="case-picture">
+          <img src="assets/home/home-satou.webp" alt="">
+        </div>
+        <span class="case-label">Лэндинг для PR-агентства. хакатон, командная работа</span>
       </a>
 
-      <a class="case-card" href="psychologist.html">
-        <picture class="case-picture">
-          <source media="(max-width: 767px)" srcset="assets/home/case3-mobile.png?v=3x2">
-          <img src="assets/home/case3-desktop.png?v=3x2" alt="Лэндинг для психолога">
-        </picture>
-        <span class="case-label">
-          <strong>Кейс 03</strong>
-          <span>Лэндинг для психолога</span>
-        </span>
+      <a class="case-card psychologist-card" href="psychologist.html">
+        <div class="case-picture">
+          <img src="assets/home/home-psychologist.webp" alt="">
+        </div>
+        <span class="case-label">Лэндинг для психолога</span>
       </a>
     </section>
   </main>
