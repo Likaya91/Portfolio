@@ -103,6 +103,7 @@
 .references img { display: block; width: 100%; object-fit: cover; border: .5px solid #a5bac4; }
 .reference-desktop img {
   height: auto;
+  border-radius: 24px;
   border: 0;
   /* Match the coverage of Figma's outside 0.5px stroke at 1x. */
   box-shadow: 0 0 0 1px rgb(165 186 196 / .45), 2px 2px 4px 4px rgb(165 186 196 / .1);
