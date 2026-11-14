@@ -259,7 +259,15 @@
   color: var(--text);
   font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, sans-serif;
 }
-.phone-old { width: var(--before-width); height: var(--before-height); color: #222; background: #fff; color-scheme: light; }
+.phone-old {
+  width: var(--before-width);
+  height: var(--before-height);
+  color: #222;
+  background: #fff;
+  color-scheme: light;
+  /* Clip the composited navigation blur to the same outline as the screen. */
+  clip-path: inset(0 round var(--screen-radius));
+}
 .phone-new { width: var(--after-width); height: var(--after-height); background: var(--bg); }
 .phone-ui img { display: block; }
 .phone-new .font-new-york { font-weight: 700; }
