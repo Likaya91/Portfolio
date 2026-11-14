@@ -68,8 +68,7 @@
 .cover-category > span:where(:first-child,:last-child), .cover-year span { margin-inline: 10px; }
 .cover-copy { grid-area: copy; }
 .cover-copy h1 { font-size: clamp(56px, 6.6vw, 92px); line-height: 1.2; }
-.cover-copy .cover-tagline { margin-top: 8px; font-size: clamp(29px, 3.43vw, 48px); line-height: 1.2; font-weight: 700; }
-.cover-copy .cover-description { margin-top: 40px; color: #aebec3; font-size: clamp(18px, 1.8vw, 25px); line-height: 1.2; }
+.cover-copy .cover-description { margin-top: 28px; color: #aebec3; font-size: clamp(18px, 1.8vw, 25px); line-height: 1.2; }
 .cover-grid .cover-year { grid-area: year; align-self: end; margin-bottom: 14px; color: #8198a4; }
 .cover-media { grid-area: media; }
 .cover-video { position: relative; aspect-ratio: 445 / 904; }
@@ -155,7 +154,7 @@
   }
   .cover-category { padding: 0; }
   .cover-copy h1 { font-size: 52px; }
-  .cover-copy .cover-tagline { font-size: 28px; }
+  .cover-copy .cover-tagline { margin-top: 8px; font-size: 28px; line-height: 1.2; font-weight: 700; }
   .cover-copy .cover-description { max-width: 36ch; margin-top: 20px; font-size: 16px; line-height: 1.5; }
   .cover-media { width: min(100%, 380px); justify-self: center; }
   .cover-video { aspect-ratio: 320 / 650; }
