@@ -262,6 +262,7 @@
 .phone-old { width: var(--before-width); height: var(--before-height); color: #222; background: #fff; color-scheme: light; }
 .phone-new { width: var(--after-width); height: var(--after-height); background: var(--bg); }
 .phone-ui img { display: block; }
+.phone-new .font-new-york { font-weight: 700; }
 .phone-ui button { border: 0; background-color: transparent; color: inherit; font: inherit; line-height: inherit; cursor: pointer; }
 .phone-ui button[class*="rounded-[25px]"] { background: #ffa21a; }
 .phone-ui button:focus-visible, .phone-ui [tabindex]:focus-visible { outline-offset: -2px; }
