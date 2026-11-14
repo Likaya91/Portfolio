@@ -434,10 +434,34 @@
   .phone-mobile .phone-fixed-nav { padding-inline: 8px; }
   .phone-mobile .phone-fixed-nav > [data-name] { width: 20%; }
   .phone-mobile .phone-fixed-nav > :last-child { left: 50%; right: auto; width: 42px; transform: translateX(-50%); }
-  .phone-mobile [data-name="Фильтр"] > :nth-child(2) > :first-child { width: auto; flex: 1; }
   .phone-mobile [data-name="Property 1=Empty"] { width: 100%; }
-  .phone-mobile .phone-new [data-action="filter-type"] { left: 98px; }
-  .phone-mobile .phone-new [data-action="sort"] { width: 30px; }
+  .phone-mobile[data-kind="gallery"] { --after-width: 285px; }
+  .phone-gallery-filter-buttons {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 12px;
+    min-width: 0;
+  }
+  .phone-gallery-card-photo { position: absolute; inset: 0; }
+  .phone-gallery-card-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-height: 190px;
+    width: 100%;
+    padding: 11px;
+  }
+  .phone-gallery-card-badges {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 45px;
+  }
+  .phone-gallery-card-rating { position: relative; width: 43px; height: 40px; }
+  .phone-mobile[data-kind="gallery"] .phone-gallery-card-badges[data-name="Slot 2"] { left: auto; }
   .phone-mobile .phone-new [data-name="Slot"] p { max-width: 100%; }
   .phone-mobile .phone-tour-overview { min-height: 726px; padding-bottom: 38px; }
   .phone-divider { position: absolute; top: 8px; bottom: 8px; left: var(--split); width: 1px; z-index: 5; background: #92aab2; pointer-events: none; }
