@@ -175,6 +175,7 @@
   .case-section .section-intro { margin-top: 16px; line-height: 1.5; }
   .references { grid-template-columns: repeat(2,minmax(0,1fr)); grid-template-rows: repeat(6,minmax(0,1fr)); gap: 0 12px; aspect-ratio: 320 / 649; margin-top: 24px; overflow: hidden; }
   .references img { height: auto; }
+  .reference-mobile img { border-radius: 16px; }
   .references img:nth-child(10) { grid-column: 2; grid-row: 5 / span 2; }
   .comparison { padding-bottom: 44px; }
   .comparison-group, .comparison-group + .comparison-group { margin-top: 32px; }
