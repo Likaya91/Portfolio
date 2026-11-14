@@ -2188,3 +2188,8 @@ body{min-width:320px}
     height:5.464%;
   }
 }
+
+.maestro-card .case-picture { background: #061d25; }
+@media (max-width: 767px) {
+  .maestro-card .case-picture img { object-fit: contain; }
+}
