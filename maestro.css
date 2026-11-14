@@ -101,7 +101,12 @@
 .case-section .section-intro { margin-top: 9px; max-width: 860px; color: var(--muted); line-height: 1.22; }
 .references { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); align-items: start; gap: 20px 10px; margin-top: 42px; }
 .references img { display: block; width: 100%; object-fit: cover; border: .5px solid #a5bac4; }
-.reference-desktop img { height: auto; }
+.reference-desktop img {
+  height: auto;
+  border: 0;
+  /* Match the coverage of Figma's outside 0.5px stroke at 1x. */
+  box-shadow: 0 0 0 1px rgb(165 186 196 / .45), 2px 2px 4px 4px rgb(165 186 196 / .1);
+}
 
 .comparison { padding-block: var(--section-top) 88px; }
 .comparison h2 { font-size: clamp(38px, 4.1vw, 57px); }
