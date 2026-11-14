@@ -275,7 +275,11 @@
 .phone-old-tour-content { overflow: visible; }
 .phone-ui .phone-desktop-old-nav { top: auto; bottom: 10px; }
 .phone-ui .phone-mobile-old-nav { position: absolute; inset: auto 0 0; background: #fff; }
-.phone-fixed-nav { z-index: 4; border-top: 1px solid rgba(165,186,196,.18); border-radius: 30px 30px 0 0; }
+.phone-new .phone-fixed-nav {
+  z-index: 4;
+  background-color: transparent;
+  border-radius: 30px 30px 0 0;
+}
 .phone-fixed-status { position: absolute; inset: 0 0 auto; z-index: 5; pointer-events: none; }
 .phone-status { position: relative; height: 62px; }
 .phone-status-content { position: absolute; top: 20px; left: 28px; right: 23px; display: flex; justify-content: space-between; align-items: center; font-size: 17px; font-weight: 600; line-height: 22px; }
@@ -284,16 +288,58 @@
 .phone-signal { width: 19px; height: 13px; clip-path: polygon(0 75%, 18% 75%, 18% 56%, 43% 56%, 43% 37%, 67% 37%, 67% 14%, 100% 14%, 100% 100%, 0 100%); }
 .phone-wifi { width: 17px; height: 12px; border-radius: 95% 95% 0 0; clip-path: polygon(0 23%, 50% 100%, 100% 23%, 80% 0, 20% 0); }
 .phone-battery { width: 24px; height: 12px; border-radius: 3px; border: 1px solid #f7f8fa; box-shadow: inset 0 0 0 1px #6f8992; }
-.phone-glass { position: absolute; inset: 0; border-radius: inherit; pointer-events: none; }
-.phone-glass-round { background: rgba(6,32,42,.65); box-shadow: inset 0 0 0 1px rgba(199,222,228,.35); border-radius: 50%; }
+.phone-glass {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Figma's glass layers use a 6 px blur with different tints and rim lighting. */
+.phone-new :is(.phone-glass, [data-name="Glass Effect"], .phone-section-nav, .phone-sheet) {
+  -webkit-backdrop-filter: blur(6px) saturate(1.18);
+  backdrop-filter: blur(6px) saturate(1.18);
+}
+.phone-new [data-name="Glass Effect"] {
+  background: linear-gradient(165deg, rgb(216 232 233 / .095), transparent 65%);
+  box-shadow: inset 0 1px rgb(242 250 251 / .19), inset 0 -1px rgb(0 13 18 / .44);
+  pointer-events: none;
+}
+.phone-new [data-name="Fill + Shadow"]:has(+ [data-name="Glass Effect"]) {
+  background: rgb(157 182 190 / .14);
+  box-shadow: 0 4px 12px rgb(0 10 16 / .18);
+  mix-blend-mode: normal;
+  pointer-events: none;
+}
+.phone-new .phone-glass-round {
+  border-radius: 50%;
+  background: linear-gradient(150deg, rgb(28 67 81 / .65), rgb(11 43 54 / .8));
+  box-shadow: inset 0 0 0 1px rgb(188 216 225 / .23), inset 0 1px rgb(232 247 251 / .2);
+}
+.phone-status > .phone-glass {
+  background: linear-gradient(rgb(130 164 177 / .16), rgb(0 27 36 / .13));
+  box-shadow: inset 0 -1px rgb(204 225 231 / .13);
+}
+[data-kind="tour"] .phone-status > .phone-glass {
+  background: linear-gradient(rgb(0 27 36 / .58), rgb(0 27 36 / .38));
+}
+.phone-fixed-nav > .phone-glass {
+  background: linear-gradient(rgb(7 38 49 / .78), rgb(0 27 36 / .94) 80%);
+  box-shadow: inset 0 1px rgb(183 211 222 / .32), inset 0 5px 12px rgb(0 14 24 / .32);
+}
+.phone-new button[data-action="back-gallery"] {
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
 .phone-section-nav {
   position: sticky;
   top: 61px;
   z-index: 3;
   margin-top: 44px;
   color: var(--text);
-  background: rgba(0,27,36,.88);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(rgb(12 45 57 / .54), rgb(0 27 36 / .73));
+  box-shadow: inset 0 1px rgb(193 219 230 / .26), inset 0 -1px rgb(193 219 230 / .1);
 }
 .phone-section-links { display: flex; gap: 24px; width: max-content; align-items: center; min-height: 55px; padding-inline: 16px; }
 .phone-section-links button[aria-current="true"] { color: var(--accent); box-shadow: inset 0 -2px var(--accent); }
@@ -329,7 +375,8 @@
   gap: 17px;
   padding: 26px 20px 42px;
   border-radius: 30px 30px 0 0;
-  background: #0b2b36;
+  background: rgb(11 43 54 / .88);
+  border-top: 1px solid rgb(193 219 230 / .28);
   box-shadow: 0 -20px 70px rgb(0 0 0 / .48);
   animation: phone-sheet-in .3s ease-out;
 }
