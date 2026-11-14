@@ -153,7 +153,8 @@ a { color: inherit; }
 .desktop-contacts{
   width:min(481px,100%);
   flex:0 1 481px;
-  padding-left:50px
+  padding-left:50px;
+  padding-bottom:38px
 }
 .contact-row{
   width:min(424px,100%);
@@ -188,14 +189,6 @@ a { color: inherit; }
   display:block;
   width:18px;
   height:22px
-}
-.contact-phone{
-  border-bottom:1px solid rgba(255,255,255,.1)
-}
-.contact-phone>a{
-  width:138px;
-  color:#fff;
-  font-feature-settings:"lnum" 1,"pnum" 1
 }
 
 .works-strip {
