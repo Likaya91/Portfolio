@@ -2,17 +2,43 @@ const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const scrollBehavior = () => motion.matches ? 'instant' : 'smooth';
 
 const videoSlot = document.querySelector('.cover-video');
-if (videoSlot.dataset.videoSrc.trim()) {
+const videoSource = videoSlot?.dataset.videoSrc?.trim();
+if (videoSource) {
   const video = document.createElement('video');
-  video.controls = true;
+  video.muted = true;
+  video.defaultMuted = true;
   video.playsInline = true;
+  video.loop = true;
   video.preload = 'metadata';
-  const still = videoSlot.querySelector('img');
-  video.poster = still.currentSrc || still.src;
-  video.src = videoSlot.dataset.videoSrc.trim();
-  video.setAttribute('aria-label', 'Видео демонстрации приложения Maestro');
-  video.addEventListener('error', () => { video.hidden = true; });
-  videoSlot.append(video);
+  video.setAttribute('aria-hidden', 'true');
+
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'cover-video-toggle';
+
+  const updateLabel = () => {
+    toggle.setAttribute('aria-label', video.paused
+      ? 'Воспроизвести видео Maestro'
+      : 'Приостановить видео Maestro');
+  };
+  video.addEventListener('play', updateLabel);
+  video.addEventListener('pause', updateLabel);
+  video.addEventListener('error', () => {
+    video.hidden = true;
+    toggle.hidden = true;
+  });
+  toggle.addEventListener('click', () => {
+    if (video.paused) video.play().catch(updateLabel);
+    else video.pause();
+  });
+  motion.addEventListener('change', ({ matches }) => {
+    if (matches) video.pause();
+  });
+
+  updateLabel();
+  videoSlot.append(video, toggle);
+  video.src = videoSource;
+  if (!motion.matches) video.play().catch(updateLabel);
 }
 
 const phones = document.querySelectorAll('.phone-viewport');
